@@ -1,0 +1,11 @@
+.container {
+    padding: 12px !important;
+    border-radius: 28px !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.icon {
+    height: 28px;
+    width: 28px;
+    filter: invert(100%);
+}

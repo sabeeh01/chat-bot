@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.messageContainer {
+    max-width: 80%;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+}

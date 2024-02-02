@@ -1,0 +1,15 @@
+.container {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.card {
+    position: absolute;
+    padding: 2px 10px;
+    height: 80vh;
+    width: 30vw;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

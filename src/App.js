@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRef, useState } from "react";
+import FAB from "./components/FAB";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Card, Overlay } from "react-bootstrap";
+import ChatBox from "./components/ChatBox";
+import styles from "./app.module.css";
 
 function App() {
+  const [messages, setMessages] = useState([]);
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.container}>
+      <FAB reference={target} onClick={() => setShow(!show)} isShown={show} />
+      <Overlay target={target.current} show={show} placement="top">
+        {({
+          placement: _placement,
+          arrowProps: _arrowProps,
+          show: _show,
+          popper: _popper,
+          hasDoneInitialMeasure: _hasDoneInitialMeasure,
+          ...props
+        }) => (
+          <Card className={styles.card} {...props}>
+            <ChatBox messages={messages} setMessages={setMessages} />
+          </Card>
+        )}
+      </Overlay>
     </div>
   );
 }
