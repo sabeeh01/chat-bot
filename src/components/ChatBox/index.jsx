@@ -1,7 +1,6 @@
-import { useState } from "react";
 import ChatInputField from "../ChatInputField";
 import styles from "./chat-box.module.css";
-import { matchWords } from "../../helper/matcher";
+import { matchWords } from "../../helpers/matcher";
 import Typewriter from "../TypeWriter";
 
 const responseDict = {
