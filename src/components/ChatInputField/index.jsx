@@ -10,9 +10,13 @@ const ChatInputField = ({ onSubmit }) => {
     setMessage(event.target.value);
   };
 
-  const onSend = () => {
+  const onSend = (e) => {
     onSubmit(message);
     setMessage("");
+  };
+
+  const handleKeyDown = (e) => {
+    e.key === "Enter" && onSend();
   };
 
   return (
@@ -23,6 +27,7 @@ const ChatInputField = ({ onSubmit }) => {
         aria-describedby="basic-addon2"
         value={message}
         onChange={handleInputChange}
+        onKeyDown={handleKeyDown}
       />
       <Button variant="dark" onClick={onSend} disabled={!message}>
         <img src={send} className={styles.icon} alt="send" />
