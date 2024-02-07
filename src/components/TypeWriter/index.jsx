@@ -1,23 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { extractTag } from "../../helpers/textSplitter";
 
-const Typewriter = ({ text, delay = 30, animate = true, style }) => {
-  const [currentText, setCurrentText] = useState(!animate ? text : "");
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    if (!animate) return;
-    
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setCurrentText((prevText) => prevText + text[currentIndex]);
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, delay);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [currentIndex, delay, text]);
-
-  return <p style={style}>{currentText}</p>;
+const Typewriter = ({ text, style }) => {
+  return Array.isArray(text) ? (
+    text.map((splice, index) => {
+      const hasTag = splice[0] === "[";
+      const tagInfo = hasTag ? extractTag(splice) : null;
+      return (
+        <div key={index}>
+          {tagInfo ? (
+            <>
+              {tagInfo.tag.includes("url") && (
+                <a href={tagInfo.tag.split("=")[1]}>{tagInfo.content}</a>
+              )}
+              {tagInfo.tag === "img" && <img src={tagInfo.content} />}
+              {tagInfo.tag === "audio" && (
+                <audio autoPlay controls src={tagInfo.content}></audio>
+              )}
+            </>
+          ) : (
+            <p style={style}>{splice}</p>
+          )}
+        </div>
+      );
+    })
+  ) : (
+    <p style={style}>{text}</p>
+  );
 };
 
 export default Typewriter;

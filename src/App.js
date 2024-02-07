@@ -4,9 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Overlay } from "react-bootstrap";
 import ChatBox from "./components/ChatBox";
 import styles from "./app.module.css";
+import usePeriodicRender from "./hooks/usePeriodicRender";
 
 function App() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages, isRendering, renderPeriodicaly] =
+    usePeriodicRender();
   const [show, setShow] = useState(false);
   const target = useRef(null);
 
@@ -23,7 +25,12 @@ function App() {
           ...props
         }) => (
           <Card className={styles.card} {...props}>
-            <ChatBox messages={messages} setMessages={setMessages} />
+            <ChatBox
+              messages={messages}
+              setMessages={setMessages}
+              isRendering={isRendering}
+              renderPeriodicaly={renderPeriodicaly}
+            />
           </Card>
         )}
       </Overlay>

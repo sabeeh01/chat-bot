@@ -3,7 +3,7 @@ import { InputGroup, FormControl, Button } from "react-bootstrap";
 import send from "../../images/send.png";
 import styles from "./chat-input-field.module.css";
 
-const ChatInputField = ({ onSubmit }) => {
+const ChatInputField = ({ onSubmit, disabled }) => {
   const [message, setMessage] = useState("");
 
   const handleInputChange = (event) => {
@@ -28,8 +28,9 @@ const ChatInputField = ({ onSubmit }) => {
         value={message}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
+        disabled={disabled}
       />
-      <Button variant="dark" onClick={onSend} disabled={!message}>
+      <Button variant="dark" onClick={onSend} disabled={!message || disabled}>
         <img src={send} className={styles.icon} alt="send" />
       </Button>
     </InputGroup>
