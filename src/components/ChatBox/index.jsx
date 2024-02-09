@@ -1,6 +1,6 @@
 import ChatInputField from "../ChatInputField";
 import styles from "./chat-box.module.css";
-import Typewriter from "../TypeWriter";
+import MessageBox from "../MessageBox";
 import { useEffect, useRef } from "react";
 import { interactions } from "../../constants/interactions";
 import { textSplitter } from "../../helpers/textSplitter";
@@ -11,9 +11,8 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
   const changeInteraction = (interaction) =>
     (currentInteraction.current = interaction);
 
-  const scrollToBottom = () => {
+  const scrollToBottom = () =>
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-  };
 
   const onSubmit = (message) => {
     const tempMessages = [...messages];
@@ -29,13 +28,7 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
     }
   };
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
-
-  useEffect(() => {
-    renderPeriodicaly(interactions[`S1 Swizzle Inn`].response);
-  }, []);
+  useEffect(scrollToBottom, [messages]);
 
   return (
     <div className={styles.container}>
@@ -55,7 +48,7 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
                 }}
                 className={styles.messageContainer}
               >
-                <Typewriter
+                <MessageBox
                   style={{
                     color: message?.isUser ? "white" : "black",
                   }}
@@ -69,6 +62,7 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
             </div>
           );
         })}
+        {isRendering && <p className={styles.typing}>Typing...</p>}
         <div ref={messagesEndRef} />
       </div>
       <ChatInputField disabled={isRendering} onSubmit={onSubmit} />

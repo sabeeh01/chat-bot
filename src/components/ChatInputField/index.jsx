@@ -19,10 +19,10 @@ const ChatInputField = ({ onSubmit, disabled }) => {
     e.key === "Enter" && onSend();
   };
 
-  return (
+  return !disabled ? (
     <InputGroup className="mb-3">
       <FormControl
-        placeholder="Message..."
+        placeholder={disabled ? "Typing..." : "Message..."}
         aria-label="Message..."
         aria-describedby="basic-addon2"
         value={message}
@@ -30,11 +30,11 @@ const ChatInputField = ({ onSubmit, disabled }) => {
         onKeyDown={handleKeyDown}
         disabled={disabled}
       />
-      <Button variant="dark" onClick={onSend} disabled={!message || disabled}>
+     <Button variant="dark" onClick={onSend} disabled={!message || disabled}>
         <img src={send} className={styles.icon} alt="send" />
       </Button>
     </InputGroup>
-  );
+  ) : null;
 };
 
 export default ChatInputField;

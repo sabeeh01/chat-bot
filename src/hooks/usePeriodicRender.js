@@ -4,28 +4,30 @@ import { lineSplitter } from "../helpers/textSplitter";
 const usePeriodicRender = () => {
   const [currentMessages, setCurrentMessages] = useState([]);
   const [isRendering, setIsRendering] = useState(false);
-  const intervalId = useRef(null);
+  const timersRef = useRef(null);
+
+  const clearTimers = () =>
+    timersRef.current &&
+    timersRef.current.forEach((timer) => clearTimeout(timer));
 
   const renderPeriodicaly = (response) => {
-    const newMessages = lineSplitter(response);
-    let index = 0;
-    setIsRendering(true);
-    intervalId.current = setInterval(() => {
-      if (newMessages.length > index) {
-        setCurrentMessages((prev) => [...prev, newMessages[index]]);
-        index++;
-      } else {
-        clearInterval(intervalId.current);
-        intervalId.current = null;
-        setIsRendering(false);
-      }
-    }, 2000);
-  };
+    clearTimers();
 
+    const newMessages = lineSplitter(response);
+    setIsRendering(true);
+    const timers = [];
+    newMessages.forEach((newMessage, index) => {
+      timers.push(
+        setTimeout(() => {
+          setCurrentMessages((prev) => [...prev, newMessage]);
+          if (index === newMessages.length - 1) setIsRendering(false);
+        }, index * 2000)
+      );
+    });
+    timersRef.current = timers;
+  };
   useEffect(() => {
-    return () => {
-      if (intervalId.current) clearInterval(intervalId.current);
-    };
+    return clearTimers;
   }, []);
 
   return [currentMessages, setCurrentMessages, isRendering, renderPeriodicaly];

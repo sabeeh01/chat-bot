@@ -1,0 +1,26 @@
+.fade {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.contentImg {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.contentAudio {
+    max-width: 100%;
+}

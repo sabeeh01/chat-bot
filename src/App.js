@@ -1,16 +1,21 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import FAB from "./components/FAB";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Overlay } from "react-bootstrap";
 import ChatBox from "./components/ChatBox";
 import styles from "./app.module.css";
 import usePeriodicRender from "./hooks/usePeriodicRender";
+import { interactions } from "./constants/interactions";
 
 function App() {
   const [messages, setMessages, isRendering, renderPeriodicaly] =
     usePeriodicRender();
   const [show, setShow] = useState(false);
   const target = useRef(null);
+
+  useEffect(() => {
+    renderPeriodicaly(interactions[`S1 Swizzle Inn`].response);
+  }, []);
 
   return (
     <div className={styles.container}>

@@ -8,6 +8,11 @@ export const interactions = {
     Hello - I am the Crazy Dude.
     ::next-3::
     [audio]https://www.paragamix.com/images/Bermudas/audioe/bb1.mp3[/audio]
+    ::next-4::
+    Click on background music for a musical accompaniment.
+    What is my first name? Please enter it here in the chat.
+    [button=https://soundcloud.com/dancersincrime/dancers-in-crime-b2b-estray-ibiza-rooftop-sessions-1]background music[/button]
+    [button=https://goo.gl/maps/yMXc2TVC19G3fF1z9]Swizzle Inn[/button]
     `,
     interaction: (message) => {
       if (
