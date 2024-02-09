@@ -21,7 +21,7 @@ const usePeriodicRender = () => {
         setTimeout(() => {
           setCurrentMessages((prev) => [...prev, newMessage]);
           if (index === newMessages.length - 1) setIsRendering(false);
-        }, index * 2000)
+        }, (index + 1) * 3000)
       );
     });
     timersRef.current = timers;

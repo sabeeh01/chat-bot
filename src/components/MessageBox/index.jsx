@@ -3,15 +3,19 @@ import { extractTag } from "../../helpers/textSplitter";
 import styles from "./message-box.module.css";
 import { Button } from "react-bootstrap";
 
-const MessageBox = ({ text, style }) => {
+const MessageBox = ({ text, style, onSelect }) => {
   return Array.isArray(text) ? (
     text.map((splice, index) => {
       const hasTag = splice[0] === "[";
       const tagInfo = hasTag ? extractTag(splice) : null;
+      console.log(splice, tagInfo);
       return (
         <div key={index} className={styles.fade}>
           {tagInfo ? (
             <>
+              {tagInfo.tag === "b" && (
+                <p style={{ ...style, fontWeight: 700 }}>{tagInfo.content}</p>
+              )}
               {tagInfo.tag.includes("url") && (
                 <a href={tagInfo.tag.split("=")[1]} target="_blank">
                   {tagInfo.content}
@@ -28,9 +32,20 @@ const MessageBox = ({ text, style }) => {
                   src={tagInfo.content}
                 />
               )}
-              {tagInfo.tag.includes("button") && (
+              {(tagInfo.tag.includes("button") ||
+                tagInfo.tag.includes("select")) && (
                 <Button
-                  onClick={() => window.open(tagInfo.tag.split("=")[1])}
+                  onClick={() => {
+                    if (tagInfo.tag.includes("button")) {
+                      window.open(tagInfo.tag.split("=")[1]);
+                    } else {
+                      onSelect(
+                        tagInfo.content.toLowerCase() === "medium"
+                          ? "S2LevelEasy"
+                          : "S2LevelHard"
+                      );
+                    }
+                  }}
                   variant="dark"
                 >
                   {tagInfo.content}

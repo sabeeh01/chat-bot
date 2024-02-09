@@ -8,14 +8,19 @@ import usePeriodicRender from "./hooks/usePeriodicRender";
 import { interactions } from "./constants/interactions";
 
 function App() {
+  const isMounted = useRef(false);
   const [messages, setMessages, isRendering, renderPeriodicaly] =
     usePeriodicRender();
   const [show, setShow] = useState(false);
   const target = useRef(null);
 
   useEffect(() => {
-    renderPeriodicaly(interactions[`S1 Swizzle Inn`].response);
-  }, []);
+    if (show && !isMounted.current) {
+      interactions.hasOwnProperty(`S1 Swizzle Inn`) &&
+        renderPeriodicaly(interactions[`S1 Swizzle Inn`].response);
+      isMounted.current = true;
+    }
+  }, [show]);
 
   return (
     <div className={styles.container}>

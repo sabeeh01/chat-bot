@@ -19,11 +19,25 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
     tempMessages.push({ isUser: true, message });
     setMessages(tempMessages);
 
-    const interaction =
-      interactions[currentInteraction.current].interaction(message);
+    const interaction = interactions.hasOwnProperty(currentInteraction.current)
+      ? interactions[currentInteraction.current].interaction(message)
+      : null;
 
     if (interaction) {
-      renderPeriodicaly(interactions[interaction].response);
+      interactions.hasOwnProperty(interaction) &&
+        renderPeriodicaly(interactions[interaction].response);
+      changeInteraction(interaction);
+    }
+  };
+
+  const onSelect = (message) => {
+    const interaction = interactions.hasOwnProperty(currentInteraction.current)
+      ? interactions[currentInteraction.current].interaction(message)
+      : null;
+
+    if (interaction) {
+      interactions.hasOwnProperty(interaction) &&
+        renderPeriodicaly(interactions[interaction].response);
       changeInteraction(interaction);
     }
   };
@@ -52,6 +66,7 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
                   style={{
                     color: message?.isUser ? "white" : "black",
                   }}
+                  onSelect={onSelect}
                   text={
                     message?.isUser
                       ? message?.message
