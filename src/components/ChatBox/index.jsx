@@ -14,23 +14,13 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
   const scrollToBottom = () =>
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
 
-  const onSubmit = (message) => {
-    const tempMessages = [...messages];
-    tempMessages.push({ isUser: true, message });
-    setMessages(tempMessages);
-
-    const interaction = interactions.hasOwnProperty(currentInteraction.current)
-      ? interactions[currentInteraction.current].interaction(message)
-      : null;
-
-    if (interaction) {
-      interactions.hasOwnProperty(interaction) &&
-        renderPeriodicaly(interactions[interaction].response);
-      changeInteraction(interaction);
+  const onSubmit = (message, isInteraction = false) => {
+    if (!isInteraction) {
+      const tempMessages = [...messages];
+      tempMessages.push({ isUser: true, message });
+      setMessages(tempMessages);
     }
-  };
 
-  const onSelect = (message) => {
     const interaction = interactions.hasOwnProperty(currentInteraction.current)
       ? interactions[currentInteraction.current].interaction(message)
       : null;
@@ -66,7 +56,7 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
                   style={{
                     color: message?.isUser ? "white" : "black",
                   }}
-                  onSelect={onSelect}
+                  onSubmit={onSubmit}
                   text={
                     message?.isUser
                       ? message?.message

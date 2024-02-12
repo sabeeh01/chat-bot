@@ -3,12 +3,11 @@ import { extractTag } from "../../helpers/textSplitter";
 import styles from "./message-box.module.css";
 import { Button } from "react-bootstrap";
 
-const MessageBox = ({ text, style, onSelect }) => {
+const MessageBox = ({ text, style, onSubmit }) => {
   return Array.isArray(text) ? (
     text.map((splice, index) => {
       const hasTag = splice[0] === "[";
       const tagInfo = hasTag ? extractTag(splice) : null;
-      console.log(splice, tagInfo);
       return (
         <div key={index} className={styles.fade}>
           {tagInfo ? (
@@ -32,19 +31,14 @@ const MessageBox = ({ text, style, onSelect }) => {
                   src={tagInfo.content}
                 />
               )}
-              {(tagInfo.tag.includes("button") ||
-                tagInfo.tag.includes("select")) && (
+              {tagInfo.tag.includes("button") && (
                 <Button
                   onClick={() => {
-                    if (tagInfo.tag.includes("button")) {
-                      window.open(tagInfo.tag.split("=")[1]);
-                    } else {
-                      onSelect(
-                        tagInfo.content.toLowerCase() === "medium"
-                          ? "S2LevelEasy"
-                          : "S2LevelHard"
-                      );
-                    }
+                    const action = tagInfo.tag.split("=")[1];
+                    const interaction = action.split("-");
+                    interaction[0] === "interaction"
+                      ? onSubmit(interaction[1])
+                      : window.open(action);
                   }}
                   variant="dark"
                 >
