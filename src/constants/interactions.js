@@ -896,30 +896,6 @@ The diving trip you are looking for goes to Warwick. So type in Warwick. At the 
     },
   },
 
-  Falsch7: {
-    response: `This is unfortunately not correct. What does it look like? Maybe Carter marked something here. Carter was one of the survivors of the Sea Venture and could have identified the Sea Venture on the map for sure. With HELP you get a tip. `,
-    interaction: (message) => {
-      if (
-        matchWords(message, [
-          "shiff3",
-          "ship3",
-          "Schiff 3",
-          "ship3",
-          "Bateau3",
-          "Bateau 3",
-          "nave 3",
-          "nave3",
-          "Schiff3",
-        ])
-      )
-        return `S7 B3 Zusatz`;
-      if (matchWords(message, [`Hilfe`, `ayuda`, `help`, `aide`]))
-        return `Hilfe7`;
-      if (matchWords(message, [`solution`])) return `L7 B3`;
-      return "Klammer7";
-    },
-  },
-
   Falsch10: {
     response: `Unfortunately, this is not correct. Please complete the web address and enter it into your browser.
     With HELP you will get a hint.`,
