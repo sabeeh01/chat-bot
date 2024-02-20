@@ -3,7 +3,7 @@ import { extractTag } from "../../helpers/textSplitter";
 import styles from "./message-box.module.css";
 import { Button } from "react-bootstrap";
 
-const MessageBox = ({ text, style, onSubmit }) => {
+const MessageBox = ({ text, style, onSubmit, setLang }) => {
   return Array.isArray(text) ? (
     text.map((splice, index) => {
       const hasTag = splice[0] === "[";
@@ -36,9 +36,17 @@ const MessageBox = ({ text, style, onSubmit }) => {
                   onClick={() => {
                     const action = tagInfo.tag.split("=")[1];
                     const interaction = action.split("-");
-                    interaction[0] === "interaction"
-                      ? onSubmit(interaction[1])
-                      : window.open(action);
+                    if (interaction[0] === "lang") {
+                      setLang(interaction[1]);
+                      onSubmit("S1 Swizzle Inn", true);
+                      return;
+                    }
+
+                    if (interaction[0] === "interaction") {
+                      onSubmit(interaction[1], true);
+                      return;
+                    }
+                    window.open(action);
                   }}
                   variant="dark"
                 >

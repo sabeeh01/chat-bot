@@ -13,14 +13,18 @@ function App() {
     usePeriodicRender();
   const [show, setShow] = useState(false);
   const target = useRef(null);
-
+  const langRef = useRef("en");
   useEffect(() => {
     if (show && !isMounted.current) {
-      interactions.hasOwnProperty(`S1 Swizzle Inn`) &&
-        renderPeriodicaly(interactions[`S1 Swizzle Inn`].response);
+      interactions.hasOwnProperty(`Language Select`) &&
+        renderPeriodicaly(interactions[`Language Select`][langRef.current]);
       isMounted.current = true;
     }
   }, [show]);
+
+  const setLang = (lang) => {
+    langRef.current = lang;
+  };
 
   return (
     <div className={styles.container}>
@@ -40,6 +44,8 @@ function App() {
               setMessages={setMessages}
               isRendering={isRendering}
               renderPeriodicaly={renderPeriodicaly}
+              lang={langRef}
+              setLang={setLang}
             />
           </Card>
         )}

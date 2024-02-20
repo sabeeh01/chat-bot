@@ -5,15 +5,21 @@ import { useEffect, useRef } from "react";
 import { interactions } from "../../constants/interactions";
 import { textSplitter } from "../../helpers/textSplitter";
 
-const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
+const ChatBox = ({
+  lang,
+  setLang,
+  messages,
+  setMessages,
+  isRendering,
+  renderPeriodicaly,
+}) => {
   const messagesEndRef = useRef(null);
-  const currentInteraction = useRef("S1 Swizzle Inn");
+  const currentInteraction = useRef("Language Select");
   const changeInteraction = (interaction) =>
     (currentInteraction.current = interaction);
 
   const scrollToBottom = () =>
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-
   const onSubmit = (message, isInteraction = false) => {
     if (!isInteraction) {
       const tempMessages = [...messages];
@@ -24,10 +30,9 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
     const interaction = interactions.hasOwnProperty(currentInteraction.current)
       ? interactions[currentInteraction.current].interaction(message)
       : null;
-
     if (interaction) {
       interactions.hasOwnProperty(interaction) &&
-        renderPeriodicaly(interactions[interaction].response);
+        renderPeriodicaly(interactions[interaction][lang.current]);
       changeInteraction(interaction);
     }
   };
@@ -53,6 +58,7 @@ const ChatBox = ({ messages, setMessages, isRendering, renderPeriodicaly }) => {
                 className={styles.messageContainer}
               >
                 <MessageBox
+                  setLang={setLang}
                   style={{
                     color: message?.isUser ? "white" : "black",
                   }}
