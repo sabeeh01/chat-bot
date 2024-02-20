@@ -12,42 +12,6 @@ export const interactions = {
     response: `Thank you for playing our online escape game. We put a lot of effort into it and we are very happy that you liked it. Please be so kind and give us a [b]short [url=https://g.page/Paragamix/review?gm]review on Google[/url][/b]. This will help us to become better known and develop more games. `,
     interaction: (message) => {},
   },
-  "L3 B1": {
-    response: `[b]Solution to Blog 1: [/b]
-
-    You can find the names of the ships and info, like the "wrecked" date in the blog post about the wrecks. Based on the date you will find out the name of the ship.
-
-    Red stamp: Warwi(K) 1619
-    Green stamp: Caesa(R) 1818
-    Blue stamp: Lord Amhers(T) 1778
-    The yellow stamp is the L'Hermini(E). Here the date is missing, but you can find a photo of the L'Herminie in the blog post "Why so many wrecks". 
-    ::next-1::
-    Solution: KRET
-    [button]next[/button]
-    `,
-    interaction: (message) => {},
-  },
-  "L4 B2": {
-    response: `[b]Solution to Blog 2: [/b]
-
-    Follow the beach to the end. There you will find the diving school of Michael Williams. There are two phone numbers on the building. 
-    ::next-1::
-    Solution: 2932915 or 2937310
-    [button=interaction-S5 B2 Anruf]next[/button]
-    `,
-    interaction: (message) => {},
-  },
-  "L5 B2": {
-    response: `
-    [b]Solution to Blog 2: [/b]
-
-The diving trip you are looking for goes to Warwick. So type in Warwick. At the end of the video you will discover the cannonballs you are looking for. The Warwick sank in 1619. If you type in Sea Venture, you'll get a clue that makes Michael suspicious.
-    ::next-1::
-    Solution: 1619
-    [button=interaction-S5 B2 Zusatz]next[/button]
-    `,
-    interaction: (message) => {},
-  },
 
   // klammers
   Klammer1: {
@@ -1341,6 +1305,293 @@ What is it?
 
   "F12 B7 Door": {
     response: `This is unfortunately not correct. With HELP you get a tip. `,
+    interaction: (message) => {
+      if (matchWords(message, ["1605"])) return `Schritt 13 Finale`;
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H12 B7 Door";
+      if (matchWords(message, ["solution"])) return "L12 B7 Door";
+      return "K12 B7 Door";
+    },
+  },
+
+  // L3
+  "L3 B1": {
+    response: `[b]Solution to Blog 1: [/b]
+
+    You can find the names of the ships and info, like the "wrecked" date in the blog post about the wrecks. Based on the date you will find out the name of the ship.
+
+    Red stamp: Warwi(K) 1619
+    Green stamp: Caesa(R) 1818
+    Blue stamp: Lord Amhers(T) 1778
+    The yellow stamp is the L'Hermini(E). Here the date is missing, but you can find a photo of the L'Herminie in the blog post "Why so many wrecks". 
+    ::next-1::
+    Solution: KRET
+    [button]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // L4
+  "L4 B2": {
+    response: `[b]Solution to Blog 2: [/b]
+
+    Follow the beach to the end. There you will find the diving school of Michael Williams. There are two phone numbers on the building. 
+    ::next-1::
+    Solution: 2932915 or 2937310
+    [button=interaction-S5 B2 Anruf]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // L5
+  "L5 B2": {
+    response: `
+    [b]Solution to Blog 2: [/b]
+
+The diving trip you are looking for goes to Warwick. So type in Warwick. At the end of the video you will discover the cannonballs you are looking for. The Warwick sank in 1619. If you type in Sea Venture, you'll get a clue that makes Michael suspicious.
+    ::next-1::
+    Solution: 1619
+    [button=interaction-S5 B2 Zusatz]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // L6
+  "L6 B3": {
+    response: `
+    [b]Solution to Blog 3: [/b]
+Take a good look around Carter's house. Compare the photo in Blog 3 with what you see on Google Maps. The plate is missing from the blog photo, which was taken shortly after the burglary.
+    ::next-1::
+    Solution: Plate
+    [button=interaction-S7 B3 Teller]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // L7
+  "L7 B3": {
+    response: `
+    [b]Solution to Blog 3: [/b]
+The plate obviously shows part of a map. The X indicates the place where the Sea Venture sank. Now find the marked spot on the map of shipwrecks based on the coastline. Ship3 sank in front of the marked section of coastline. So according to the map Carter made, Ship3 is the Sea Venture.
+    ::next-1::
+    Solution: Ship3
+    [button=interaction-S7 B3 Zusatz]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // L8
+  "L8 B4 Grotto": {
+    response: `
+    [b]Solution:[/b]
+
+    1. First press the light switch in Henry Tucker's house so that the infrared camera can detect what is hidden. Look around, you will find two grids on which Henry has marked numbers. Put the two grids on top of each other and fill in the empty spaces with the numbers from 1 to 9, each only once, so that in each row, each column and each diagonal the sum is 34:
+    
+    3-12-13-6
+    14-7-2-11
+    1-10-15-8
+    16-5-4-9
+    
+    2. Look at the interactive map of Bermuda. There you will find a grid similar to the one in Henry Tucker's house. In blog post 4, the number 2 is mentioned. You will find the 2 in row 2 in column 3. This place marks "Cathedral Cave" on the map. This is the place you are looking for.
+    ::next-1::
+    Solution: Cathedral cave
+    [button=interaction-S8a B4 Bueste]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  "L8a B4 Bueste": {
+    response: `
+    [b]Solution to Blog 4:[/b]
+Follow the arrows and look around the cave. At the very end you will find the bust of the roman god that Carter once hid in the cave. 
+    ::next-1::
+    Solution: Bacchus
+    [button=interaction-S8b B4 Spa]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // L9
+  "L9a B5": {
+    response: `
+    [b]Solution to Blog 5: [/b]
+    The bottle was found on the L'Herminie. In Blog 1 "Why so many wrecks" you can find the Flickr photos about the wreck.
+    ::next-1::
+    Solution: L.97.665 or L.97.608
+    [button=interaction-S9b B5 Flaschen]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  "L9b B5": {
+    response: `
+    [b]Solution to Blog 5: [/b]
+    First, take a look at Bil's Instagram profile to see which glass tokens are from the Sea Venture. Then look for those brands in the black and white photo and enter the letter/number combination in the chat in the form X1 Y1, i.e. F1 A2 for example.
+    ::next-1::
+    Solution: B2 E3 or E3 B2
+    [button=interaction-S10 B6 Goldkreuz]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // L10
+  "L10 B6": {
+    response: `
+    [b][b]Solution to Blog 6: [/b]
+This puzzle has it all. Look for the items on the packing list at the Ocean Discovery Center (pictured right). You will find the items in the showcases. Now you have to find the 4 ships on the wreck map and arrange the letters in the order of the packing list:
+Navigation circle -  in the showcase of the Warwick - G
+Medical ampoule - in the Constellation's showcase at the bottom right - O
+Ship's bell - not to be missed in the Frenchman's showcase - L
+Millstone - not to be missed in the showcase of the Caesar - D
+The word you are looking for is GOLD.
+
+You can find out the y by counting the stones on the gold cross (also on display at the Ocean Discovery Center). There are SEVEN.
+So the URL is: https://tinyurl.com/GOLDSEVEN
+
+Type this URL into your browser. In the article with the number 364215375135191 you can read who bought the gold ducats. [/b]
+    ::next-1::
+    Solution: Christian Lueder
+    [button=interaction-S11 B7 Buch]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // L11
+  "L11 B7": {
+    response: `
+    [b]Solution to Blog 7:[/b]
+EXODUS - The numbers indicate the position of the searched letter in the respective word. So 2nd for the 2nd letter in the word that was omitted in the text.
+    ::next-1::
+    Solution: Somersbook
+    [button=interaction-S12 B7 Gewehr]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // L12
+  "L12 B7 Gewehr": {
+    response: `
+    [b]Solution to Blog 7:[/b]
+Somer's book mentions the cove where the castaways were stranded. To decipher the building that is nearby, you need the text from Somer's book and the table with the pictograms. Each sentence stands for a certain pictogram, whose letter you should find out. The solution is FORT! So the cannon was brought to the fort. 
+    ::next-1::
+    Solution: Fort!
+    [button=interaction-S12 B7 Fort]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  "L12 B7 Fort": {
+    response: `
+    [b]Solution to Blog 7:[/b]
+In Bil's blog about Fort St. Catherine you will find a link that leads inside the fort. There you will find a locked door. You can find out the number of the combination lock by following the sounds. First you'll hear a bell, then a chain, then a clock and then a saw. On the wall there is a symbol for each object. This is the mirrored digit of the code for the combination lock. 
+    ::next-1::
+    Solution: 3512
+    [button=interaction-S12 B7 Door]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  "L12 B7 Door": {
+    response: `
+    [b]Solution to Blog 7:[/b]
+Once you open the door, after a few steps you will find the cannon of a board on which there are 4 colored Xs. You can find out the numbers by looking at the rows of numbers on the wall opposite. On the wall to the left of the cannon, you will find three tools to load the cannon with. On the wall opposite you will find the same tools again. Using the three colors red, green, and blue, you identify the correct rows of numbers and must now add the X's to the row of numbers. The X's in the correct order give the date (anno) mentioned on the sign under the cannon.
+    ::next-1::
+    Solution: 1605
+    [button=interaction-Schritt 13 Finale]next[/button]
+    `,
+    interaction: (message) => {},
+  },
+
+  // H8
+  "H8 B4 Grotto": {
+    response: `[b]Help: [/b]
+
+    1. First press the light switch in Henry Tucker's house so that the infrared camera can detect what is hidden. Look around, you will find two grids on which Henry has marked numbers. Place the two grids on top of each other and fill in the empty spaces with the numbers from 1 to 9, each only once, so that in each row, each column and each diagonal the sum is 34. 
+    
+    2. Look at the interactive map of Bermuda. There you will find a grid similar to the one in Henry Tucker's house. In blog post 4, the number 2 is mentioned. 
+    
+    With SOLUTION you can skip this mystery.`,
+    interaction: (message) => {
+      if (matchWords(message, [`Cathedral`, `Cave`, `Palm`, `grotto`]))
+        return "S8a B4 Bueste";
+      if (matchWords(message, ["solution"])) return "L8 B4 Grotto";
+      return "K8 B4 Grotto";
+    },
+  },
+
+  "H8a B4 Bueste": {
+    response: `[b]Help: [/b]
+    Follow the arrows to the end and look around the cave.
+    With SOLUTION you can skip this mystery.`,
+    interaction: (message) => {
+      if (matchWords(message, [`Baccus`, `Bacchus`])) return "S8b B4 Spa";
+      if (matchWords(message, ["solution"])) return "L8a B4 Bueste";
+      return "K8a B4 Bueste";
+    },
+  },
+
+  // F9
+  "H9a B5 Tucker": {
+    response: `[b]Help: [/b]
+    The bottle was found on L'Herminie. Take a closer look at the Flickr photos (blog 1) of this wreck. 
+    With SOLUTION you can skip this riddle. `,
+    interaction: (message) => {
+      if (matchWords(message, [`L.97.665`, `L97665`, `L.97.608`, `L97608`]))
+        return "S9b B5 Flaschen";
+      if (matchWords(message, ["solution"])) return "L9a B5";
+      return "K9a B5 Tucker";
+    },
+  },
+
+  "H9b B5 Flaschen": {
+    response: `[b]Help:[/b]
+    First, check out Bil's Instagram profile to see which glass tokens are from the Sea Venture. Then find those marks in the black and white photo and enter the letter/number combination in the chat.
+    With SOLUTION you can skip this riddle. `,
+    interaction: (message) => {
+      if (
+        matchWords(message, [
+          "B2E3",
+          `E3B2`,
+          `E3,B2`,
+          `B2,E3`,
+          "B2 E3",
+          "E3 B2",
+          "e3 and b2",
+          "b2 and e3",
+          "B2, E3",
+          "E3, B2",
+        ])
+      )
+        return `S9 B5 Mustererkennung`;
+      if (matchWords(message, ["solution"])) return "L9b B5";
+      return "K9b B5 Flaschen";
+    },
+  },
+
+  // F12
+  "H12 B7 Gewehr": {
+    response: `[b]Help:[/b] Somer's book mentions the bay where the castaways were stranded. To decipher the building that is nearby, you need the text from Somer's book and the table with the pictograms. Each sentence stands for a certain pictogram, whose letter you should find out. What is the name of the building?
+    With SOLUTION you will skip this puzzle.`,
+    interaction: (message) => {
+      if (matchWords(message, ["Fort", "Fort!"])) return `Schritt 13 Finale`;
+      if (matchWords(message, ["solution"])) return "L12 B7 Gewehr";
+      return "K12 B7 Gewehr";
+    },
+  },
+
+  "H12 B7 Fort": {
+    response: `[b]Help: [/b]In Bil's blog about Fort St. Catherine you will find a link that leads inside the fort. There you will find a locked door. You can find out the number of the combination lock by following the sounds. 
+    With SOLUTION you will skip this puzzle. `,
+    interaction: (message) => {
+      if (matchWords(message, ["3512"])) return `S12 B7 Door`;
+      if (matchWords(message, ["solution"])) return "L12 B7 Fort";
+      return "K12 B7 Fort";
+    },
+  },
+
+  "H12 B7 Door": {
+    response: `[b]Help:[/b] When you have opened the door, after a few steps you will find the cannon of a board on which there are 4 colored Xs. You can find out the numbers by looking at the rows of numbers on the wall opposite. On the wall to the left of the cannon, you will find three tools to load the cannon with. On the wall opposite you will find the same tools again. Using the three colors red, green, and blue, you identify the correct rows of numbers and must now add the X's to the row of numbers. The X's in the correct order give the date (anno) mentioned on the sign under the cannon.
+    With SOLUTION you skip this puzzle. `,
     interaction: (message) => {
       if (matchWords(message, ["1605"])) return `Schritt 13 Finale`;
       if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
