@@ -1,18 +1,5 @@
 import { matchWords } from "../helpers/matcher";
 export const interactions = {
-  "Bewertung schlecht": {
-    response: `Thank you for trying our online escape game. 
-    ::next-1::
-    It's a pity that you didn't like it. We would like to adapt the game even better to your requirements and would be very pleased to receive your feedback. Please send an email to <a href= "mailto:feedback@paragamix.com">feedback@paragamix.com</a>.
-    For beginners we recommend [url=https://www.paragamix.com/en-us/escape_adele_e]Adele[/url] or the [url=https://www.paragamix.com/en-us/escape_jerez_e]Sherry adventure[/url].
-    `,
-    interaction: (message) => {},
-  },
-  "Bewertung gut": {
-    response: `Thank you for playing our online escape game. We put a lot of effort into it and we are very happy that you liked it. Please be so kind and give us a [b]short [url=https://g.page/Paragamix/review?gm]review on Google[/url][/b]. This will help us to become better known and develop more games. `,
-    interaction: (message) => {},
-  },
-
   // klammers
   Klammer1: {
     response: `This is unfortunately not correct. With HELP you get a tip. `,
@@ -652,13 +639,12 @@ export const interactions = {
 
   // S1
   "S1 Swizzle Inn": {
-    response: `
-    If you want to change the language, [url=https://www.paragamix.com/en-us/start-mission]enter the code again and choose the language first[/url]
-::next-2::
-[img]https://www.paragamix.com/images/Bermudas/px_bermuda_crazydude.gif[/img]
-Hello - I am the Crazy Dude.
-::next-3::
-[audio]https://www.paragamix.com/images/Bermudas/audioe/bb1.mp3[/audio]
+    response: `If you want to change the language, [url=https://www.paragamix.com/en-us/start-mission]enter the code again and choose the language first[/url].
+    ::next-2::
+    [img]https://www.paragamix.com/images/Bermudas/px_bermuda_crazydude.gif[/img]
+    Hello - I am the Crazy Dude.
+    ::next-3::
+    [audio]https://www.paragamix.com/images/Bermudas/audioe/bb1.mp3[/audio]
 ::next-4::
 Click on background music for a musical accompaniment.
 What is my first name? Please enter it here in the chat.
@@ -1693,6 +1679,206 @@ Once you open the door, after a few steps you will find the cannon of a board on
         return "H12 B7 Door";
       if (matchWords(message, ["solution"])) return "L12 B7 Door";
       return "F12 B7 Door";
+    },
+  },
+
+  //
+  "Bewertung schlecht": {
+    response: `Thank you for trying our online escape game. 
+    ::next-1::
+    It's a pity that you didn't like it. We would like to adapt the game even better to your requirements and would be very pleased to receive your feedback. Please send an email to <a href= "mailto:feedback@paragamix.com">feedback@paragamix.com</a>.
+    For beginners we recommend [url=https://www.paragamix.com/en-us/escape_adele_e]Adele[/url] or the [url=https://www.paragamix.com/en-us/escape_jerez_e]Sherry adventure[/url].
+    `,
+    interaction: (message) => {},
+  },
+  "Bewertung gut": {
+    response: `Thank you for playing our online escape game. We put a lot of effort into it and we are very happy that you liked it. Please be so kind and give us a [b]short [url=https://g.page/Paragamix/review?gm]review on Google[/url][/b]. This will help us to become better known and develop more games. `,
+    interaction: (message) => {},
+  },
+
+  // Ship names
+  Warwick: {
+    response: `The English merchant ship Warwick was owned by the Earl of Warwick and sank in 1619 during a strong storm in Castle Harbor [url=https://www.flickr.com/photos/154021822@N07/albums/72157663437450738]Photos[/url]`,
+    interaction: (message) => {
+      return "Klammer3";
+    },
+  },
+
+  Caesar: {
+    response: `The English brig Caesar suffered shipwreck on a Bermuda reef on her way from Shields to Baltimore. She had loaded millstones, medicine bottles, parts of grandfather clocks, glassware, lead oxide and a marble ledge for a church in Baltimore.  [url=https://www.flickr.com/photos/154021822@N07/albums/72157690658730635]Fotos[/url]`,
+    interaction: (message) => {
+      return "Klammer3";
+    },
+  },
+
+  "San Pedro": {
+    response: `The San Pedro and the Warwick look very similar. The Spanish San Pedro was on a voyage from Cartagena to Cádiz and was shipwrecked in 1594. [url=https://www.flickr.com/photos/154021822@N07/albums/72157661363800127]Have a look[/url]`,
+    interaction: (message) => {
+      return "Klammer3";
+    },
+  },
+
+  "Lord Amherst": {
+    response: `Der mit 24 Kanonen bestückte englische Waffentransporter Lord Amherst ist 1778 auf dem Weg von Jamaika nach London gekentert. Es wurde als Lazarettschiff eingesetzt, um verletzte Seeleute aus dem Revolutionskrieg zurück nach England zu bringen. [url=https://www.flickr.com/photos/154021822@N07/albums/72157688137290692]Fotos[/url]`,
+    interaction: (message) => {
+      return "Klammer3";
+    },
+  },
+
+  "The Frenchman": {
+    response: `Dieses nicht identifizierte Schiffswrack wurde Ende des 20. Jahrhunderts gefunden. In den letzten Jahren hat der Schatzsucher Teddy Tucker an dem Fundort gearbeitet und eine Vielzahl von Artefakten aus der Zeit des Revolutionskrieges geborgen.[url=https://www.flickr.com/photos/154021822@N07/albums/72157689310294251]Fotos[/url]`,
+    interaction: (message) => {
+      return "Klammer3";
+    },
+  },
+
+  "l'herminie": {
+    response: `Die 60 Geschütze starke französische Fregatte L'Herminie ist 1839 gesunken. Sie gehörte zu einem Geschwader in mexikanischen Gewässern, das zur Durchsetzung französischer Ansprüche gegen Mexiko entsandt worden war. Aufgrund des rauen Wetters begab sich das Schiff in den Schutz der Bermudas. Als das Land gesichtet wurde, war es zu spät.[url=https://www.flickr.com/photos/154021822@N07/albums/72157690662407525]Fotos[/url]`,
+    interaction: (message) => {
+      return "Klammer3";
+    },
+  },
+
+  Constellation: {
+    response: `This American four-masted schooner sank in 1943. During the Second World War it was put into service and used as a cargo ship. Today its hull lies broken on a coral and sand bottom and reveals petrified bags of cement, building material and glassware. [url=https://www.flickr.com/photos/154021822@N07/albums/72157663404710038]Schau mal...[/url]`,
+    interaction: (message) => {
+      return "Klammer3";
+    },
+  },
+
+  "Cristobal Colon": {
+    response: `This huge Spanish cruise ship sank in 1946. It sailed between New York and Central America. The Cristobal Colon was one of the most luxurious cruise ships of her time and crashed into the coral reefs off the north coast of Bermuda because the captain misinterpreted an offshore communication tower as the Gibbs Hill Lighthouse.
+    [url=https://www.flickr.com/photos/154021822@N07/albums/72157663404919348]Schau mal...[/url]`,
+    interaction: (message) => {
+      return "Klammer3";
+    },
+  },
+
+  "Tauchen Sea Venture": {
+    response: `To most ships I offer diving trips, but not to Sea Venture. Everyone knows that the wreck of the Sea Venture has not yet been discovered. What makes you think that I have found the gold ducats? Carter must have found the gold treasure shortly after the sinking of the Sea Venture. Teddy must have looted the rest. Why don't you ask him? Choose another ship for a dive.
+    [audio]https://www.paragamix.com/images/Bermudas/audioe/bb9.mp3[/audio]
+    ::next-1::
+    Find another wreck.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen Montana": {
+    response: `Welcome to our virtual dive trip. On to the Montana.
+    [video]https://youtu.be/E9Awv0bANhc[/video]
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen Lartinton": {
+    response: `Welcome to our virtual dive trip. On to Lartington.
+    [video]https://youtu.be/JdskrvJUA1M[/video]
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen Caesar": {
+    response: `Welcome to our virtual dive trip. On to Caesar.
+    [video]https://vimeo.com/60489114[/video]
+    
+    The English brig Caesar suffered shipwreck on a Bermuda reef on her way from Shields to Baltimore.
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen Herminie": {
+    response: `Welcome to our virtual dive trip. On to L'Herminie.
+    [/b][video]https://youtu.be/rfCbndOflwg[/video]
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen Constellation": {
+    response: `Welcome to our virtual dive trip. On to Constellation.
+    [video]https://youtu.be/E9Awv0bANhc[/video]
+    This American four-masted schooner sank in 1943. During the Second World War it was put into service and used as a cargo ship.
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen Warwick": {
+    response: `Welcome to our virtual dive trip. On to Warwick.
+    [video]https://youtu.be/LGnEd08vsD0[/video]
+    The English merchant ship Warwick was owned by the Earl of Warwick and sank in 1619 during a strong storm in Castle Harbor 
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen Christobal": {
+    response: `Welcome to our virtual dive trip. On to Christobal Colon.
+    [video]https://youtu.be/7khZxnGze4c[/video]
+    This huge Spanish cruise ship sank in 1946. It sailed between New York and Central America.
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen San Pedro": {
+    response: `Unfortunately we do not offer diving trips to San Pedro. Instead we recommend the Warwick, which is just as old.[video]https://youtu.be/LGnEd08vsD0[/video]
+    The English merchant ship Warwick was owned by the Earl of Warwick and sank in 1619 during a strong storm in Castle Harbor.
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen Ship3": {
+    response: `I can assure you that it is not worth diving there. I have visited this wreck several times and there is nothing to see there except some wooden planks. Everything I found I have given to the [url=https://goo.gl/maps/u8j8VPb5z8QYJ4b9A]Ocean Discovery Center[/url]. That is all I have. Please choose another wreck.
+
+    [audio]https://www.paragamix.com/images/Bermudas/audioe/bb10.mp3[/audio]
+    
+    But we can take a [url=https://goo.gl/maps/2ebb159HBbKr7zeQ6]tour with the jet ski[/url] to the approximate position of ship3. 
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
+    },
+  },
+
+  "Tauchen Ship sonstige": {
+    response: `This wreck has not yet been identified. I have been there several times. With pleasure we can make an excursion there.
+    ::next-1::
+    Thank you for booking a virtual dive trip.
+    [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
+    interaction: (message) => {
+      return "Klammer5";
     },
   },
 };
