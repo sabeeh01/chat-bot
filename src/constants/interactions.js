@@ -1600,4 +1600,99 @@ Once you open the door, after a few steps you will find the cannon of a board on
       return "K12 B7 Door";
     },
   },
+
+  // K8
+  "K8 B4 Grotto": {
+    response: `If this is your answer, unfortunately it is wrong. `,
+    interaction: (message) => {
+      if (matchWords(message, [`Cathedral`, `Cave`, `Palm`, `grotto`]))
+        return "S8a B4 Bueste";
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H8 B4 Grotto";
+      if (matchWords(message, ["solution"])) return "L8 B4 Grotto";
+      return "F8 B4 Grotto";
+    },
+  },
+
+  "K8a B4 Bueste": {
+    response: `If this is your answer, unfortunately it is wrong. `,
+    interaction: (message) => {
+      if (matchWords(message, [`Baccus`, `Bacchus`])) return "S8b B4 Spa";
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H8a B4 Bueste";
+      if (matchWords(message, ["solution"])) return "L8a B4 Bueste";
+      return "F8a B4 Bueste";
+    },
+  },
+
+  // K9
+  "K9a B5 Tucker": {
+    response: `If this is your answer, unfortunately it is wrong.`,
+    interaction: (message) => {
+      if (matchWords(message, [`L.97.665`, `L97665`, `L.97.608`, `L97608`]))
+        return "S9b B5 Flaschen";
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H9a B5 Tucker";
+      if (matchWords(message, ["solution"])) return "L9a B5";
+      return "F9a B5 Tucker";
+    },
+  },
+
+  "K9b B5 Flaschen": {
+    response: `If this is your answer, unfortunately it is wrong. Two groups of bottles are attributed to the Sea Venture.`,
+    interaction: (message) => {
+      if (
+        matchWords(message, [
+          "B2E3",
+          `E3B2`,
+          `E3,B2`,
+          `B2,E3`,
+          "B2 E3",
+          "E3 B2",
+          "e3 and b2",
+          "b2 and e3",
+          "B2, E3",
+          "E3, B2",
+        ])
+      )
+        return `S9 B5 Mustererkennung`;
+      if (matchWords(message, [`hilfe`, `Help`])) return "H9b B5 Flaschen";
+      if (matchWords(message, ["solution"])) return "L9b B5";
+      return "F9b B5 Flaschen";
+    },
+  },
+
+  // K12
+  "K12 B7 Gewehr": {
+    response: `If that's your answer, I'm afraid it's wrong. What is the word that results from the pictograms?`,
+    interaction: (message) => {
+      if (matchWords(message, ["Fort", "Fort!"])) return `S12 B7 Fort`;
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H12 B7 Gewehr";
+      if (matchWords(message, ["solution"])) return "L12 B7 Gewehr";
+      return "F12 B7 Gewehr";
+    },
+  },
+
+  "K12 B7 Fort": {
+    response: `If that's your answer, I'm afraid it's wrong. What is the code for the combination lock?`,
+    interaction: (message) => {
+      if (matchWords(message, ["3512"])) return `S12 B7 Door`;
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H12 B7 Fort";
+      if (matchWords(message, ["solution"])) return "L12 B7 Fort";
+      return "F12 B7 Fort";
+    },
+  },
+
+  "K12 B7 Door": {
+    response: `If this is your answer, I'm afraid it's wrong. When was the rifle manufactured? I am looking for the year. `,
+    interaction: (message) => {
+      if (matchWords(message, ["1605"])) return `Schritt 13 Finale`;
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H12 B7 Door";
+      if (matchWords(message, ["solution"])) return "L12 B7 Door";
+      return "F12 B7 Door";
+    },
+  },
 };
