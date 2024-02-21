@@ -106,7 +106,14 @@ export const interactions = {
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
       if (
         matchWords(message, [
-          "ship 3, ship3, schiff3, Schiff 3, nave3, nave 3, Bateau3, Bateau 3",
+          "ship 3",
+          "ship3",
+          "schiff3",
+          "Schiff 3",
+          "nave3",
+          "nave 3",
+          "Bateau3",
+          "Bateau 3",
         ])
       )
         return `Tauchen Ship3`;
@@ -591,7 +598,14 @@ export const interactions = {
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
       if (
         matchWords(message, [
-          "ship 3, ship3, schiff3, Schiff 3, nave3, nave 3, Bateau3, Bateau 3",
+          "ship 3",
+          "ship3",
+          "schiff3",
+          "Schiff 3",
+          "nave3",
+          "nave 3",
+          "Bateau3",
+          "Bateau 3",
         ])
       )
         return `Tauchen Ship3`;
@@ -958,7 +972,14 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
       if (
         matchWords(message, [
-          "ship 3, ship3, schiff3, Schiff 3, nave3, nave 3, Bateau3, Bateau 3",
+          "ship 3",
+          "ship3",
+          "schiff3",
+          "Schiff 3",
+          "nave3",
+          "nave 3",
+          "Bateau3",
+          "Bateau 3",
         ])
       )
         return `Tauchen Ship3`;
@@ -1002,7 +1023,7 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
       if (
         matchWords(message, [
-          "ship 3, ship3, schiff3, Schiff 3, nave3, nave 3, Bateau3, Bateau 3",
+          "ship 3", "ship3", "schiff3", "Schiff 3", "nave3", "nave 3", "Bateau3", "Bateau 3",
         ])
       )
         return `Tauchen Ship3`;
@@ -1067,12 +1088,21 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     interaction: (message) => {
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
         return `Hilfe7`;
+
       if (
         matchWords(message, [
-          "ship 3, ship3, schiff3, Schiff 3, nave3, nave 3, Bateau3, Bateau 3",
+          "ship 3",
+          "ship3",
+          "schiff3",
+          "Schiff 3",
+          "nave3",
+          "nave 3",
+          "Bateau3",
+          "Bateau 3",
         ])
       )
         return `S7 B3 Zusatz`;
+
       if (matchWords(message, ["solution"])) return `L7 B3`;
       return "Klammer7";
     },
