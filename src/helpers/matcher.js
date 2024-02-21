@@ -1,4 +1,4 @@
-const wordBreaker = (text) => text.match(/\b[\p{L}']+\b/gu) || [];
+const wordBreaker = (text) => text.match(/\b[\p{L}'0-9-]+\b/gu) || [];
 
 export const matchWords = (str = "", words = []) => {
   return words.some((word) => {

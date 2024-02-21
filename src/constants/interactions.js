@@ -101,7 +101,7 @@ export const interactions = {
       if (matchWords(message, ["Constellation"]))
         return `Tauchen Constellation`;
       if (matchWords(message, ["Cristobal", "CristobalColon", "Colon"]))
-        return `Tauchen Cristobal`;
+        return `Tauchen Christobal`;
       if (matchWords(message, ["Lartington"])) return `Tauchen Lartinton`;
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
       if (
@@ -354,7 +354,7 @@ export const interactions = {
       if (matchWords(message, ["Constellation"]))
         return `Tauchen Constellation`;
       if (matchWords(message, ["Cristobal", "CristobalColon", "Colon"]))
-        return `Tauchen Cristobal`;
+        return `Tauchen Christobal`;
       if (matchWords(message, ["venture", "Seaventure"]))
         return `Tauchen Sea Venture`;
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
@@ -586,7 +586,7 @@ export const interactions = {
       if (matchWords(message, ["Constellation"]))
         return `Tauchen Constellation`;
       if (matchWords(message, ["Cristobal", "CristobalColon", "Colon"]))
-        return `Tauchen Cristobal`;
+        return `Tauchen Christobal`;
       if (matchWords(message, ["Lartington"])) return `Tauchen Lartinton`;
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
       if (
@@ -953,7 +953,7 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
       if (matchWords(message, ["Constellation"]))
         return `Tauchen Constellation`;
       if (matchWords(message, ["Cristobal", "CristobalColon", "Colon"]))
-        return `Tauchen Cristobal`;
+        return `Tauchen Christobal`;
       if (matchWords(message, ["Lartington"])) return `Tauchen Lartinton`;
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
       if (
@@ -997,7 +997,7 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
       if (matchWords(message, ["Constellation"]))
         return `Tauchen Constellation`;
       if (matchWords(message, ["Cristobal", "CristobalColon", "Colon"]))
-        return `Tauchen Cristobal`;
+        return `Tauchen Christobal`;
       if (matchWords(message, ["Lartington"])) return `Tauchen Lartinton`;
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
       if (
