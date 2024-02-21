@@ -678,9 +678,11 @@ export const interactions = {
 
   "Language Select": {
     en: `Please change the language first before playing this game,
-[button=lang-en]Englisch[/button]
+[button=lang-en]English[/button]
+[button=lang-de]German[/button]`,
+    de: `Bitte ändern Sie zuerst die Sprache, bevor Sie dieses Spiel spielen
+    [button=lang-en]Englisch[/button]
 [button=lang-de]Deutsch[/button]`,
-    de: `Bitte ändern Sie zuerst die Sprache, bevor Sie dieses Spiel spielen`,
     interaction: (message) => {
       if (message === "S1 Swizzle Inn") return "S1 Swizzle Inn";
     },
@@ -740,8 +742,9 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     [button=interaction-S2 Level easy]Mittel[/button]
     [button=interaction-S2 Level hard]knifflig[/button]`,
     interaction: (message) => {
-      if (message === "S2LevelEasy") return "S2LevelEasy";
-      if (message === "S2LevelHard") return "S2LevelHard";
+      console.log(message);
+      if (message === "S2 Level easy") return "S2 Level easy";
+      if (message === "S2 Level hard") return "S2 Level hard";
 
       if (matchWords(message, [`hilfe`, `hinweis`, `ayuda`, `help`, `aide`]))
         return `Hilfe2 Aufloesung`;
@@ -1113,7 +1116,17 @@ What is it?
     Was ist das?
     [button=https://www.paragamix.com/dsinga/tucker1/app-files/index.html]Tucker-Haus[/button]`,
     interaction: (message) => {
-      if (matchWords(message, ["Cathedral", "Cave", "Palm", "grotto"]))
+      if (
+        matchWords(message, [
+          "Cathedral",
+          "Cave",
+          "Palm",
+          "grotto",
+          "Grotte",
+          "Höhle",
+          "Kathedrale",
+        ])
+      )
         return `S8a B4 Bueste`;
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
         return `H8 B4 Grotto`;
@@ -1168,6 +1181,8 @@ What is it?
           "L.97.608",
           "L97608",
           "solución",
+          "solution",
+          "lösung",
         ])
       )
         return `S9b B5 Flaschen`;
@@ -1384,7 +1399,17 @@ What is it?
     en: `Unfortunately, this is not correct. Put the two grids on top of each other. With HELP you get a tip.`,
     de: `Leider ist das nicht richtig. Legen Sie die beiden Gitter übereinander. Mit HELP erhalten Sie einen Tipp.`,
     interaction: (message) => {
-      if (matchWords(message, [`Cathedral`, `Cave`, `Palm`, `grotto`]))
+      if (
+        matchWords(message, [
+          `Cathedral`,
+          `Cave`,
+          `Palm`,
+          `grotto`,
+          "Grotte",
+          "Höhle",
+          "Kathedrale",
+        ])
+      )
         return "S8a B4 Bueste";
       if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
         return "H8 B4 Grotto";
@@ -1771,7 +1796,18 @@ Once you open the door, after a few steps you will find the cannon of a board on
     
     Mit SOLUTION können Sie sich dieses Rätsel ersparen.`,
     interaction: (message) => {
-      if (matchWords(message, [`Cathedral`, `Cave`, `Palm`, `grotto`]))
+      if (
+        matchWords(message, [
+          `Cathedral`,
+          `Cave`,
+          `Palm`,
+          `grotto`,
+          "Kathedrale",
+          "Katedrale",
+          "Grotte",
+          "Höhle",
+        ])
+      )
         return "S8a B4 Bueste";
       if (matchWords(message, ["solution"])) return "L8 B4 Grotto";
       return "K8 B4 Grotto";
@@ -1803,7 +1839,7 @@ Once you open the door, after a few steps you will find the cannon of a board on
     interaction: (message) => {
       if (matchWords(message, [`L.97.665`, `L97665`, `L.97.608`, `L97608`]))
         return "S9b B5 Flaschen";
-      if (matchWords(message, ["solution"])) return "L9a B5";
+      if (matchWords(message, ["solution", "lösung"])) return "L9a B5";
       return "K9a B5 Tucker";
     },
   },
@@ -1880,7 +1916,18 @@ Once you open the door, after a few steps you will find the cannon of a board on
     en: `If this is your answer, unfortunately it is wrong. `,
     de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. `,
     interaction: (message) => {
-      if (matchWords(message, [`Cathedral`, `Cave`, `Palm`, `grotto`]))
+      if (
+        matchWords(message, [
+          `Cathedral`,
+          `Cave`,
+          `Palm`,
+          `grotto`,
+          "Kathedrale",
+          "Katedrale",
+          "Grotte",
+          "Höhle",
+        ])
+      )
         return "S8a B4 Bueste";
       if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
         return "H8 B4 Grotto";
@@ -1910,7 +1957,7 @@ Once you open the door, after a few steps you will find the cannon of a board on
         return "S9b B5 Flaschen";
       if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
         return "H9a B5 Tucker";
-      if (matchWords(message, ["solution"])) return "L9a B5";
+      if (matchWords(message, ["solution", "lösung"])) return "L9a B5";
       return "F9a B5 Tucker";
     },
   },
