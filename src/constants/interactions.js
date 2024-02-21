@@ -683,9 +683,7 @@ export const interactions = {
     de: `Bitte ändern Sie zuerst die Sprache, bevor Sie dieses Spiel spielen
     [button=lang-en]Englisch[/button]
 [button=lang-de]Deutsch[/button]`,
-    interaction: (message) => {
-      if (message === "S1 Swizzle Inn") return "S1 Swizzle Inn";
-    },
+    interaction: (message) => {},
   },
 
   // S1
@@ -742,10 +740,6 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     [button=interaction-S2 Level easy]Mittel[/button]
     [button=interaction-S2 Level hard]knifflig[/button]`,
     interaction: (message) => {
-      console.log(message);
-      if (message === "S2 Level easy") return "S2 Level easy";
-      if (message === "S2 Level hard") return "S2 Level hard";
-
       if (matchWords(message, [`hilfe`, `hinweis`, `ayuda`, `help`, `aide`]))
         return `Hilfe2 Aufloesung`;
 

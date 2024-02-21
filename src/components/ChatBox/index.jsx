@@ -20,20 +20,28 @@ const ChatBox = ({
 
   const scrollToBottom = () =>
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    
   const onSubmit = (message, isInteraction = false) => {
-    if (!isInteraction) {
+    if (isInteraction) {
+      currentInteraction.current = message;
+      renderPeriodicaly(interactions[currentInteraction.current][lang.current]);
+      changeInteraction(currentInteraction.current);
+    } else {
       const tempMessages = [...messages];
       tempMessages.push({ isUser: true, message });
       setMessages(tempMessages);
-    }
 
-    const interaction = interactions.hasOwnProperty(currentInteraction.current)
-      ? interactions[currentInteraction.current].interaction(message)
-      : null;
-    if (interaction) {
-      interactions.hasOwnProperty(interaction) &&
-        renderPeriodicaly(interactions[interaction][lang.current]);
-      changeInteraction(interaction);
+      const interaction = interactions.hasOwnProperty(
+        currentInteraction.current
+      )
+        ? interactions[currentInteraction.current].interaction(message)
+        : null;
+
+      if (interaction) {
+        interactions.hasOwnProperty(interaction) &&
+          renderPeriodicaly(interactions[interaction][lang.current]);
+        changeInteraction(interaction);
+      }
     }
   };
 
