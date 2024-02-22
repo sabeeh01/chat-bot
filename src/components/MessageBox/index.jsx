@@ -15,7 +15,7 @@ const MessageBox = ({ text, style, onSubmit, setLang }) => {
               {tagInfo.tag === "b" && (
                 <p style={{ ...style, fontWeight: 700 }}>{tagInfo.content}</p>
               )}
-              {tagInfo.tag.includes("url") && (
+              {tagInfo.tag?.includes("url") && (
                 <a href={tagInfo.tag.split("=")[1]} target="_blank">
                   {tagInfo.content}
                 </a>
@@ -31,7 +31,7 @@ const MessageBox = ({ text, style, onSubmit, setLang }) => {
                   src={tagInfo.content}
                 />
               )}
-              {tagInfo.tag.includes("button") && (
+              {tagInfo.tag?.includes("button") && (
                 <Button
                   onClick={() => {
                     const action = tagInfo.tag.split("=")[1];

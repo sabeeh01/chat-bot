@@ -831,7 +831,7 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     ::next-3::
     [b]Mission solution: [/b]When you have solved all the puzzles, send an email to the art expert.
     ::next-4::
-    [[b]If things get stuck: [/b]Start again with RESTART. Then simply enter the number of the blog (e.g. BLOG1 for the first blog) and you start where you left off. 
+    [b]If things get stuck: [/b]Start again with RESTART. Then simply enter the number of the blog (e.g. BLOG1 for the first blog) and you start where you left off. 
     ::next-5::
     Enter "Blog x" here for the next task, so for example Blog 1 for the 1st blog or start the 1st task via the button.
     [button=https://parablog.wixsite.com/bermudaswrecks]Bils blog[/button]
