@@ -14,7 +14,8 @@ const ChatBox = ({
   renderPeriodicaly,
 }) => {
   const messagesEndRef = useRef(null);
-  const currentInteraction = useRef("Language Select");
+  // const currentInteraction = useRef("Language Select");
+  const currentInteraction = useRef("S1 Swizzle Inn");
   const changeInteraction = (interaction) =>
     (currentInteraction.current = interaction?.trim());
 

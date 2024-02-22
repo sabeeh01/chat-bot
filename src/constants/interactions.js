@@ -800,7 +800,9 @@ export const interactions = {
 
   // S1
   "S1 Swizzle Inn": {
-    en: `[img]https://www.paragamix.com/images/Bermudas/px_bermuda_crazydude.gif[/img]
+    en: `If you want to change the language, [url=https://www.paragamix.com/en-us/start-mission]enter the code again and choose the language first[/url]
+    ::next-2::
+    [img]https://www.paragamix.com/images/Bermudas/px_bermuda_crazydude.gif[/img]
     Hello - I am the Crazy Dude.
     ::next-3::
     [audio]https://www.paragamix.com/images/Bermudas/audioe/bb1.mp3[/audio]
@@ -810,7 +812,9 @@ What is my first name? Please enter it here in the chat.
 [button=https://soundcloud.com/dancersincrime/dancers-in-crime-b2b-estray-ibiza-rooftop-sessions-1]background music[/button]
 [button=https://goo.gl/maps/yMXc2TVC19G3fF1z9]Swizzle Inn[/button]
 `,
-    de: `[img]https://www.paragamix.com/images/Bermudas/px_bermuda_crazydude.gif[/img]
+    de: `Wenn Sie die Sprache ändern möchten, [url=https://www.paragamix.com/en-us/start-mission]geben Sie den Code erneut ein und wählen Sie zunächst die Sprache aus[/url]
+    ::next-2::
+    [img]https://www.paragamix.com/images/Bermudas/px_bermuda_crazydude.gif[/img]
 Hallo - ich bin der Crazy Dude.
 ::next-3::
 [audio]https://www.paragamix.com/images/Bermudas/audiog/bb1.mp3[/audio]
@@ -2184,7 +2188,7 @@ Once you open the door, after a few steps you will find the cannon of a board on
       return "Klammer5";
     },
   },
-  
+
   "Tauchen Caesar": {
     en: `Welcome to our virtual dive trip. On to Caesar.
     [video]https://vimeo.com/60489114[/video]

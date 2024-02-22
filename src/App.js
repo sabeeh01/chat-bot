@@ -16,8 +16,10 @@ function App() {
   const langRef = useRef("en");
   useEffect(() => {
     if (show && !isMounted.current) {
-      interactions.hasOwnProperty(`Language Select`) &&
-        renderPeriodicaly(interactions[`Language Select`][langRef.current]);
+      // interactions.hasOwnProperty(`Language Select`) &&
+      //   renderPeriodicaly(interactions[`Language Select`][langRef.current]);
+      interactions.hasOwnProperty(`S1 Swizzle Inn`) &&
+        renderPeriodicaly(interactions[`S1 Swizzle Inn`][langRef.current]);
       isMounted.current = true;
     }
   }, [show]);
