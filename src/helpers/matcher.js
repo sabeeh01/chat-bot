@@ -5,6 +5,6 @@ export const matchWords = (str = "", words = []) => {
     // return wordBreaker(str).some(
     //   (senWord) => senWord.toLowerCase() === word.toLowerCase()
     // );
-    return str.toLowerCase() === word.toLowerCase();
+    return str.toLowerCase().trim() === word.toLowerCase().trim();
   });
 };

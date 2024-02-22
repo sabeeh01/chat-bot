@@ -65,11 +65,14 @@ export const interactions = {
     interaction: (message) => {
       if (
         matchWords(message, [
-          "2937310",
-          "2932915",
-          "293-7310",
-          "293 7310",
+          "2937319",
           "293-2915",
+          "293-7319",
+          "293-7310",
+          "2937310",
+          "294-7319",
+          "2932915",
+          "293 7310",
           "293 2915",
           "293 7319",
           "2937319",
@@ -163,22 +166,7 @@ export const interactions = {
     en: `If this is your answer, unfortunately it is wrong.`,
     de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch.`,
     interaction: (message) => {
-      if (
-        matchWords(message, [
-          "Hilfe",
-          "Ayuda",
-          "Aide",
-          "Help",
-          "schiff3",
-          "Schiff 3",
-          "ship3",
-          "ship 3",
-          "Bateau3",
-          "Bateau 3",
-          "nave3",
-          "nave 3",
-        ])
-      )
+      if (matchWords(message, ["Hilfe", "Ayuda", "Aide", "Help"]))
         return `Hilfe7`;
 
       if (
@@ -198,6 +186,80 @@ export const interactions = {
       if (matchWords(message, [`solution`])) return `L7 B3`;
 
       return "Falsch7";
+    },
+  },
+
+  "K8 B4 Grotto": {
+    en: `If this is your answer, unfortunately it is wrong. `,
+    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. `,
+    interaction: (message) => {
+      if (
+        matchWords(message, [
+          `Cathedral`,
+          `Cave`,
+          `Palm`,
+          `grotto`,
+          "Kathedrale",
+          "Katedrale",
+          "Grotte",
+          "Höhle",
+        ])
+      )
+        return "S8a B4 Bueste";
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H8 B4 Grotto";
+      if (matchWords(message, ["solution"])) return "L8 B4 Grotto";
+      return "F8 B4 Grotto";
+    },
+  },
+
+  "K8a B4 Bueste": {
+    en: `If this is your answer, unfortunately it is wrong. `,
+    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. `,
+    interaction: (message) => {
+      if (matchWords(message, [`Baccus`, `Bacchus`])) return "S8b B4 Spa";
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H8a B4 Bueste";
+      if (matchWords(message, ["solution"])) return "L8a B4 Bueste";
+      return "F8a B4 Bueste";
+    },
+  },
+
+  "K9a B5 Tucker": {
+    en: `If this is your answer, unfortunately it is wrong.`,
+    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. `,
+    interaction: (message) => {
+      if (matchWords(message, [`L.97.665`, `L97665`, `L.97.608`, `L97608`]))
+        return "S9b B5 Flaschen";
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H9a B5 Tucker";
+      if (matchWords(message, ["solution", "lösung"])) return "L9a B5";
+      return "F9a B5 Tucker";
+    },
+  },
+
+  "K9b B5 Flaschen": {
+    en: `If this is your answer, unfortunately it is wrong. Two groups of bottles are attributed to the Sea Venture.`,
+    de: `Wenn dies Ihre Antwort ist, ist sie leider falsch. Zwei Gruppen von Flaschen werden der Sea Venture zugeschrieben.`,
+    interaction: (message) => {
+      if (
+        matchWords(message, [
+          "B2E3",
+          `E3B2`,
+          `E3,B2`,
+          `B2,E3`,
+          "B2 E3",
+          "E3 B2",
+          "e3 and b2",
+          "b2 and e3",
+          "B2, E3",
+          "E3, B2",
+        ])
+      )
+        return `S9 B5 Mustererkennung`;
+      if (matchWords(message, [`hilfe`, `Help`])) return "H9b B5 Flaschen";
+      if (matchWords(message, ["solution"])) return "L9b B5";
+      return "F9b B5 Flaschen";
     },
   },
 
@@ -231,7 +293,43 @@ export const interactions = {
 
       if (matchWords(message, [`solution`])) return `L11 B7`;
 
-      return "L11 B7 Buch";
+      return "F11 B7 Buch";
+    },
+  },
+
+  "K12 B7 Gewehr": {
+    en: `If that's your answer, I'm afraid it's wrong. What is the word that results from the pictograms?`,
+    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. Wie lautet das Wort, das sich aus den Piktogrammen ergibt?`,
+    interaction: (message) => {
+      if (matchWords(message, ["Fort", "Fort!"])) return `S12 B7 Fort`;
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H12 B7 Gewehr";
+      if (matchWords(message, ["solution"])) return "L12 B7 Gewehr";
+      return "F12 B7 Gewehr";
+    },
+  },
+
+  "K12 B7 Fort": {
+    en: `If that's your answer, I'm afraid it's wrong. What is the code for the combination lock?`,
+    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. Wie lautet der Code für das Zahlenschloss?`,
+    interaction: (message) => {
+      if (matchWords(message, ["3512"])) return `S12 B7 Door`;
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H12 B7 Fort";
+      if (matchWords(message, ["solution"])) return "L12 B7 Fort";
+      return "F12 B7 Fort";
+    },
+  },
+
+  "K12 B7 Door": {
+    en: `If this is your answer, I'm afraid it's wrong. When was the rifle manufactured? I am looking for the year. `,
+    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. In welchem Jahr wurde das Gewehr hergestellt? `,
+    interaction: (message) => {
+      if (matchWords(message, ["1605"])) return `Schritt 13 Finale`;
+      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
+        return "H12 B7 Door";
+      if (matchWords(message, ["solution"])) return "L12 B7 Door";
+      return "F12 B7 Door";
     },
   },
 
@@ -946,13 +1044,13 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     [img]https://dvgpba5hywmpo.cloudfront.net/media/image/NRDKa7BJSQJ4bUwuaExzv1bp3[/img]
     ::next-2::
     Are you interested in when the ship sank that I found these cannonballs on? Explore the wreck map, type in the name of the wreck or type in the year if you know it.
-    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B&usp=sharing]wreck map[/button]`,
+    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B]wreck map[/button]`,
     de: `[audio]https://www.paragamix.com/images/Bermudas/audioe/bb2.mp3[/audio]
     ::next-1::
     [img]https://dvgpba5hywmpo.cloudfront.net/media/image/NRDKa7BJSQJ4bUwuaExzv1bp3[/img]
     ::next-2::
     nteressiert es Sie, wann das Schiff gesunken ist, auf dem ich diese Kanonenkugeln gefunden habe? Erkunden Sie die Wrackkarte, geben Sie den Namen des Wracks ein oder geben Sie das Jahr ein, wenn Sie die Lösung wissen.
-    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B&usp=sharing]Wrackkarte[/button]`,
+    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B]Wrackkarte[/button]`,
     interaction: (message) => {
       if (matchWords(message, ["1619"])) return `S5 B2 Zusatz`;
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
@@ -1023,7 +1121,14 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
       if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
       if (
         matchWords(message, [
-          "ship 3", "ship3", "schiff3", "Schiff 3", "nave3", "nave 3", "Bateau3", "Bateau 3",
+          "ship 3",
+          "ship3",
+          "schiff3",
+          "Schiff 3",
+          "nave3",
+          "nave 3",
+          "Bateau3",
+          "Bateau 3",
         ])
       )
         return `Tauchen Ship3`;
@@ -1932,119 +2037,6 @@ Once you open the door, after a few steps you will find the cannon of a board on
         return "H12 B7 Door";
       if (matchWords(message, ["solution"])) return "L12 B7 Door";
       return "K12 B7 Door";
-    },
-  },
-
-  // K8
-  "K8 B4 Grotto": {
-    en: `If this is your answer, unfortunately it is wrong. `,
-    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. `,
-    interaction: (message) => {
-      if (
-        matchWords(message, [
-          `Cathedral`,
-          `Cave`,
-          `Palm`,
-          `grotto`,
-          "Kathedrale",
-          "Katedrale",
-          "Grotte",
-          "Höhle",
-        ])
-      )
-        return "S8a B4 Bueste";
-      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
-        return "H8 B4 Grotto";
-      if (matchWords(message, ["solution"])) return "L8 B4 Grotto";
-      return "F8 B4 Grotto";
-    },
-  },
-
-  "K8a B4 Bueste": {
-    en: `If this is your answer, unfortunately it is wrong. `,
-    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. `,
-    interaction: (message) => {
-      if (matchWords(message, [`Baccus`, `Bacchus`])) return "S8b B4 Spa";
-      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
-        return "H8a B4 Bueste";
-      if (matchWords(message, ["solution"])) return "L8a B4 Bueste";
-      return "F8a B4 Bueste";
-    },
-  },
-
-  // K9
-  "K9a B5 Tucker": {
-    en: `If this is your answer, unfortunately it is wrong.`,
-    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. `,
-    interaction: (message) => {
-      if (matchWords(message, [`L.97.665`, `L97665`, `L.97.608`, `L97608`]))
-        return "S9b B5 Flaschen";
-      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
-        return "H9a B5 Tucker";
-      if (matchWords(message, ["solution", "lösung"])) return "L9a B5";
-      return "F9a B5 Tucker";
-    },
-  },
-
-  "K9b B5 Flaschen": {
-    en: `If this is your answer, unfortunately it is wrong. Two groups of bottles are attributed to the Sea Venture.`,
-    de: `Wenn dies Ihre Antwort ist, ist sie leider falsch. Zwei Gruppen von Flaschen werden der Sea Venture zugeschrieben.`,
-    interaction: (message) => {
-      if (
-        matchWords(message, [
-          "B2E3",
-          `E3B2`,
-          `E3,B2`,
-          `B2,E3`,
-          "B2 E3",
-          "E3 B2",
-          "e3 and b2",
-          "b2 and e3",
-          "B2, E3",
-          "E3, B2",
-        ])
-      )
-        return `S9 B5 Mustererkennung`;
-      if (matchWords(message, [`hilfe`, `Help`])) return "H9b B5 Flaschen";
-      if (matchWords(message, ["solution"])) return "L9b B5";
-      return "F9b B5 Flaschen";
-    },
-  },
-
-  // K12
-  "K12 B7 Gewehr": {
-    en: `If that's your answer, I'm afraid it's wrong. What is the word that results from the pictograms?`,
-    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. Wie lautet das Wort, das sich aus den Piktogrammen ergibt?`,
-    interaction: (message) => {
-      if (matchWords(message, ["Fort", "Fort!"])) return `S12 B7 Fort`;
-      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
-        return "H12 B7 Gewehr";
-      if (matchWords(message, ["solution"])) return "L12 B7 Gewehr";
-      return "F12 B7 Gewehr";
-    },
-  },
-
-  "K12 B7 Fort": {
-    en: `If that's your answer, I'm afraid it's wrong. What is the code for the combination lock?`,
-    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. Wie lautet der Code für das Zahlenschloss?`,
-    interaction: (message) => {
-      if (matchWords(message, ["3512"])) return `S12 B7 Door`;
-      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
-        return "H12 B7 Fort";
-      if (matchWords(message, ["solution"])) return "L12 B7 Fort";
-      return "F12 B7 Fort";
-    },
-  },
-
-  "K12 B7 Door": {
-    en: `If this is your answer, I'm afraid it's wrong. When was the rifle manufactured? I am looking for the year. `,
-    de: `Wenn das Ihre Antwort ist, dann ist sie leider falsch. In welchem Jahr wurde das Gewehr hergestellt? `,
-    interaction: (message) => {
-      if (matchWords(message, ["1605"])) return `Schritt 13 Finale`;
-      if (matchWords(message, [`hilfe`, `Ayuda`, `Help`, `aide`]))
-        return "H12 B7 Door";
-      if (matchWords(message, ["solution"])) return "L12 B7 Door";
-      return "F12 B7 Door";
     },
   },
 

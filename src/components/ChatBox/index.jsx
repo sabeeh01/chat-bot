@@ -16,11 +16,11 @@ const ChatBox = ({
   const messagesEndRef = useRef(null);
   const currentInteraction = useRef("Language Select");
   const changeInteraction = (interaction) =>
-    (currentInteraction.current = interaction);
+    (currentInteraction.current = interaction?.trim());
 
   const scrollToBottom = () =>
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    
+
   const onSubmit = (message, isInteraction = false) => {
     if (isInteraction) {
       currentInteraction.current = message;
