@@ -1,10 +1,11 @@
 var path = require("path");
+const fs = require("fs");
 var express = require("express");
 // const http = require('http');
 var https = require("https");
 const logger = require("morgan");
 const app = express();
-const port = 8080;
+const port = 443;
 
 const certOptions = {
   key: fs.readFileSync("/etc/letsencrypt/live/chatbot.sptest.dev/privkey.pem"),
