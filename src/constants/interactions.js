@@ -1827,7 +1827,7 @@ The word you are looking for is GOLD.
 You can find out the y by counting the stones on the gold cross (also on display at the Ocean Discovery Center). There are SEVEN.
 So the URL is: https://tinyurl.com/GOLDSEVEN
 
-Type this URL into your browser. In the article with the number 364215375135191 you can read who bought the gold ducats. [/b]
+Type this URL into your browser. In the article with the number 364215375135191 you can read who bought the gold ducats.
     ::next-1::
     Solution: Christian Lueder
     [button=interaction-S11 B7 Buch]next[/button]`,
