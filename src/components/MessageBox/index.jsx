@@ -3,6 +3,12 @@ import { extractTag } from "../../helpers/textSplitter";
 import styles from "./message-box.module.css";
 import { Button } from "react-bootstrap";
 
+const getInfo = (text) => {
+  const index = text.indexOf("=");
+  let resultArray = [text.substring(0, index), text.substring(index + 1)];
+  return resultArray[1];
+};
+
 const MessageBox = ({ text, style, onSubmit, setLang }) => {
   return Array.isArray(text) ? (
     text.map((splice, index) => {
@@ -16,7 +22,7 @@ const MessageBox = ({ text, style, onSubmit, setLang }) => {
                 <p style={{ ...style, fontWeight: 700 }}>{tagInfo.content}</p>
               )}
               {tagInfo.tag?.includes("url") && (
-                <a href={tagInfo.tag.split("=")[1]} target="_blank">
+                <a href={getInfo(tagInfo.tag)} target="_blank">
                   {tagInfo.content}
                 </a>
               )}
@@ -34,7 +40,7 @@ const MessageBox = ({ text, style, onSubmit, setLang }) => {
               {tagInfo.tag?.includes("button") && (
                 <Button
                   onClick={() => {
-                    const action = tagInfo.tag.split("=")[1];
+                    const action = getInfo(tagInfo.tag);
                     const interaction = action.split("-");
                     if (interaction[0] === "lang") {
                       setLang(interaction[1]);

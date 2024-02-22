@@ -1044,13 +1044,13 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     [img]https://dvgpba5hywmpo.cloudfront.net/media/image/NRDKa7BJSQJ4bUwuaExzv1bp3[/img]
     ::next-2::
     Are you interested in when the ship sank that I found these cannonballs on? Explore the wreck map, type in the name of the wreck or type in the year if you know it.
-    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B]wreck map[/button]`,
+    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B&usp=sharing]wreck map[/button]`,
     de: `[audio]https://www.paragamix.com/images/Bermudas/audioe/bb2.mp3[/audio]
     ::next-1::
     [img]https://dvgpba5hywmpo.cloudfront.net/media/image/NRDKa7BJSQJ4bUwuaExzv1bp3[/img]
     ::next-2::
     nteressiert es Sie, wann das Schiff gesunken ist, auf dem ich diese Kanonenkugeln gefunden habe? Erkunden Sie die Wrackkarte, geben Sie den Namen des Wracks ein oder geben Sie das Jahr ein, wenn Sie die Lösung wissen.
-    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B]Wrackkarte[/button]`,
+    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B&usp=sharing]Wrackkarte[/button]`,
     interaction: (message) => {
       if (matchWords(message, ["1619"])) return `S5 B2 Zusatz`;
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
