@@ -813,7 +813,7 @@ What is my first name? Please enter it here in the chat.
     de: `[img]https://www.paragamix.com/images/Bermudas/px_bermuda_crazydude.gif[/img]
 Hallo - ich bin der Crazy Dude.
 ::next-3::
-[audio]https://www.paragamix.com/images/Bermudas/audioe/bb1.mp3[/audio]
+[audio]https://www.paragamix.com/images/Bermudas/audiog/bb1.mp3[/audio]
 ::next-4::
 Klicken Sie auf Hintergrundmusik, um eine musikalische Begleitung zu
 erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
@@ -1045,7 +1045,7 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     ::next-2::
     Are you interested in when the ship sank that I found these cannonballs on? Explore the wreck map, type in the name of the wreck or type in the year if you know it.
     [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B&usp=sharing]wreck map[/button]`,
-    de: `[audio]https://www.paragamix.com/images/Bermudas/audioe/bb2.mp3[/audio]
+    de: `[audio]https://www.paragamix.com/images/Bermudas/audiog/bb2.mp3[/audio]
     ::next-1::
     [img]https://dvgpba5hywmpo.cloudfront.net/media/image/NRDKa7BJSQJ4bUwuaExzv1bp3[/img]
     ::next-2::
@@ -1189,7 +1189,7 @@ erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     de: `[img]http://www.paragamix.com/images/Bermudas/bermuda_zinnteller.gif[/img]
     [url=http://www.paragamix.com/images/Bermudas/bermuda_zinnteller.gif]vergrößern[/url]
     ::next-2::
-    [audio]https://www.paragamix.com/images/Bermudas/audioe/bb3.mp3[/audio]`,
+    [audio]https://www.paragamix.com/images/Bermudas/audiog/bb3.mp3[/audio]`,
     interaction: (message) => {
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
         return `Hilfe7`;
@@ -1367,7 +1367,7 @@ What is it?
     ::next-3::
     I came up with the last name of the art expert. We should get Moore involved. Write him an email later at xxxxx.mooreABC@gmail.com when you have found out the first name xxxxx and und A,B,C.
     [button=interaction-S10 B6 Goldkreuz]next task[/button]`,
-    de: `[audio]https://www.paragamix.com/images/Bermudas/audioe/bb8.mp3[/audio]
+    de: `[audio]https://www.paragamix.com/images/Bermudas/audiog/bb8.mp3[/audio]
     ::next-2::
     [img]https://www.paragamix.com/images/Bermudas/bermudas_flaschen.gif[/img]
     [url=https://www.paragamix.com/images/Bermudas/bermudas_flaschen.gif]vergrößern[/url]
@@ -1388,7 +1388,7 @@ What is it?
     [audio]https://www.paragamix.com/images/Bermudas/audioe/bb5.mp3[/audio]`,
     de: `[b]Blog 6 Goldkreuz[/b]
     ::next-2::
-    [audio]https://www.paragamix.com/images/Bermudas/audioe/bb5.mp3[/audio]`,
+    [audio]https://www.paragamix.com/images/Bermudas/audiog/bb5.mp3[/audio]`,
     interaction: (message) => {
       if (matchWords(message, ["Christian", "Lueder", "Lüder"]))
         return `S11 B7 Buch`;
@@ -1452,7 +1452,7 @@ What is it?
     [img]https://www.paragamix.com/images/Bermudas/chat_DiscoveryBuch_englisch.gif[/img]
     [url=https://www.paragamix.com/images/Bermudas/chat_DiscoveryBuch_englisch.gif]vergrößern[/url]
     ::next-2::
-    [audio]https://www.paragamix.com/images/Bermudas/audioe/bb6.mp3[/audio]
+    [audio]https://www.paragamix.com/images/Bermudas/audiog/bb6.mp3[/audio]
     ::next-1::
     [img]https://www.paragamix.com/images/Bermudas/px_bermuda_picos.jpg[/img]
     [url=https://www.paragamix.com/images/Bermudas/px_bermuda_picos.jpg]vergrößern[/url]`,
@@ -1490,8 +1490,8 @@ What is it?
     de: `Der Code war korrekt und das Zahlenschloss ist nun offen.
     Die Kanone ist ein weiteres Artefakt aus der Sea Venture, aber wann wurde sie genau hergestellt?
     ::next-2::
-    [img]https://www.paragamix.com/images/Bermudas/px_bermuda_tuer.jpg[/img][b]
-    [/b][url=https://www.paragamix.com/dsinga/gun/app-files/index.html]Offene Tür[/url].`,
+    [img]https://www.paragamix.com/images/Bermudas/px_bermuda_tuer.jpg[/img]
+    [url=https://www.paragamix.com/dsinga/gun/app-files/index.html]Offene Tür[/url].`,
     interaction: (message) => {
       if (matchWords(message, ["1605"])) return `Schritt 13 Finale`;
       if (matchWords(message, ["Hilfe", "help"])) return `H12 B7 Door`;
@@ -1727,7 +1727,7 @@ Take a good look around Carter's house. Compare the photo in Blog 3 with what yo
 
   // L7
   "L7 B3": {
-    en: `=[b]Solution to Blog 3: [/b]
+    en: `[b]Solution to Blog 3: [/b]
 The plate obviously shows part of a map. The X indicates the place where the Sea Venture sank. Now find the marked spot on the map of shipwrecks based on the coastline. Ship3 sank in front of the marked section of coastline. So according to the map Carter made, Ship3 is the Sea Venture.
     ::next-1::
     Solution: Ship3
@@ -1816,7 +1816,7 @@ Follow the arrows and look around the cave. At the very end you will find the bu
 
   // L10
   "L10 B6": {
-    en: `[b][b]Solution to Blog 6: [/b]
+    en: `[b]Solution to Blog 6: [/b]
 This puzzle has it all. Look for the items on the packing list at the Ocean Discovery Center (pictured right). You will find the items in the showcases. Now you have to find the 4 ships on the wreck map and arrange the letters in the order of the packing list:
 Navigation circle -  in the showcase of the Warwick - G
 Medical ampoule - in the Constellation's showcase at the bottom right - O
@@ -2055,10 +2055,10 @@ Once you open the door, after a few steps you will find the cannon of a board on
   },
 
   "Bewertung gut": {
-    en: `Thank you for playing our online escape game. We put a lot of effort into it and we are very happy that you liked it. Please be so kind and give us a [b]short [url=https://g.page/Paragamix/review?gm]review on Google[/url][/b]. This will help us to become better known and develop more games.  `,
-    de: `Vielen Dank, dass Sie unser Online-Escape-Spiel gespielt haben. Wir haben uns sehr viel Mühe gegeben und freuen uns sehr, dass es Ihnen gefallen hat. Bitte seien Sie so nett und geben Sie uns eine [b]kurze [url=https://g.page/Paragamix/review?gm]Bewertung auf Google[/url][/b]. Dies wird uns helfen, bekannter zu werden und weitere Spiele zu entwickeln. 
+    en: `Thank you for playing our online escape game. We put a lot of effort into it and we are very happy that you liked it. Please be so kind and give us a short [url=https://g.page/Paragamix/review?gm]review on Google[/url]. This will help us to become better known and develop more games.  `,
+    de: `Vielen Dank, dass Sie unser Online-Escape-Spiel gespielt haben. Wir haben uns sehr viel Mühe gegeben und freuen uns sehr, dass es Ihnen gefallen hat. Bitte seien Sie so nett und geben Sie uns eine kurze [url=https://g.page/Paragamix/review?gm]Bewertung auf Google[/url]. Dies wird uns helfen, bekannter zu werden und weitere Spiele zu entwickeln. 
 
-    Vielen Dank, dass Sie unser Online Escape Spiel gespielt haben. Wir haben uns sehr bemüht und freuen uns, dass es Ihnen gefallen hat. Bitte nehmen Sie sich einen Moment Zeit, um uns eine kurze Bewertung auf Google zu hinterlassen. Ihr Feedback hilft uns, bekannter zu werden und zukünftige Spiele zu verbessern. [b][url=https://g.page/Paragamix/review?gm]Hier können Sie Ihre Bewertung abgeben[/url][/b]. Vielen Dank für Ihre Unterstützung! `,
+    Vielen Dank, dass Sie unser Online Escape Spiel gespielt haben. Wir haben uns sehr bemüht und freuen uns, dass es Ihnen gefallen hat. Bitte nehmen Sie sich einen Moment Zeit, um uns eine kurze Bewertung auf Google zu hinterlassen. Ihr Feedback hilft uns, bekannter zu werden und zukünftige Spiele zu verbessern. [url=https://g.page/Paragamix/review?gm]Hier können Sie Ihre Bewertung abgeben[/url]. Vielen Dank für Ihre Unterstützung! `,
     interaction: (message) => {},
   },
 
@@ -2184,7 +2184,7 @@ Once you open the door, after a few steps you will find the cannon of a board on
       return "Klammer5";
     },
   },
-
+  
   "Tauchen Caesar": {
     en: `Welcome to our virtual dive trip. On to Caesar.
     [video]https://vimeo.com/60489114[/video]
@@ -2206,12 +2206,12 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Herminie": {
     en: `Welcome to our virtual dive trip. On to L'Herminie.
-    [/b][video]https://youtu.be/rfCbndOflwg[/video]
+    [video]https://youtu.be/rfCbndOflwg[/video]
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserer virtuellen Tauchreise. Auf zur L'Herminie!
-    [/b][video]https://youtu.be/rfCbndOflwg[/video]
+    [video]https://youtu.be/rfCbndOflwg[/video]
     ::next-1::
     Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.
     [button=interaction-S5 B2 Anruf]Rufen Sie Michael an[/button]`,
