@@ -7,9 +7,9 @@ const app = express();
 const port = 8080;
 
 const certOptions = {
-  key: fs.readFileSync("/etc/letsencrypt/live/client.sptest.dev/privkey.pem"),
+  key: fs.readFileSync("/etc/letsencrypt/live/chatbot.sptest.dev/privkey.pem"),
   cert: fs.readFileSync(
-    "/etc/letsencrypt/live/client.sptest.dev/fullchain.pem"
+    "/etc/letsencrypt/live/chatbot.sptest.dev/fullchain.pem"
   ),
   // ca: fs.readFileSync('./ca_bundle.pem')
 };
