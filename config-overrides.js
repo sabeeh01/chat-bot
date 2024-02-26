@@ -6,7 +6,7 @@ module.exports = function override(config, env) {
     filename: "static/js/main.chatbot.js",
     chunkFilename: "static/js/chatbot.chunk.js",
     path: path.resolve(__dirname, "build"),
-    publicPath: "/",
+    publicPath: "/en/",
   };
 
   config.plugins = [

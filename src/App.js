@@ -8,12 +8,13 @@ import usePeriodicRender from "./hooks/usePeriodicRender";
 import { interactions } from "./constants/interactions";
 
 function App() {
+  const pathname = window.location.pathname?.split("/");
   const isMounted = useRef(false);
   const [messages, setMessages, isRendering, renderPeriodicaly] =
     usePeriodicRender();
   const [show, setShow] = useState(false);
   const target = useRef(null);
-  const langRef = useRef("en");
+  const langRef = useRef(pathname?.length > 1 ? pathname[1] : "en");
   useEffect(() => {
     if (show && !isMounted.current) {
       // interactions.hasOwnProperty(`Language Select`) &&
