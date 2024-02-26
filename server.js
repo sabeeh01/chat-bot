@@ -17,9 +17,9 @@ const certOptions = {
 
 app.use(logger("dev"));
 
-app.use("/de", express.static(path.join(__dirname, "build")));
+app.use("/", express.static(path.join(__dirname, "build")));
 
-app.get("/de/*", function (req, res) {
+app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "./build", "/index.html"));
 });
 
