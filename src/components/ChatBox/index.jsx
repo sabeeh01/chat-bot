@@ -13,14 +13,26 @@ const ChatBox = ({
   isRendering,
   renderPeriodicaly,
 }) => {
+  const listContainerRef = useRef(null);
   const messagesEndRef = useRef(null);
   // const currentInteraction = useRef("Language Select");
   const currentInteraction = useRef("S1 Swizzle Inn");
   const changeInteraction = (interaction) =>
     (currentInteraction.current = interaction?.trim());
 
-  const scrollToBottom = () =>
-    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToBottom = () => {
+    if (
+      listContainerRef.current &&
+      listContainerRef.current.scrollHeight >
+        listContainerRef.current.clientHeight
+    ) {
+      messagesEndRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
+      });
+    }
+  };
 
   const onSubmit = (message, isInteraction = false) => {
     if (isInteraction) {
@@ -50,7 +62,7 @@ const ChatBox = ({
 
   return (
     <div className={styles.container}>
-      <div className={styles.listContainer}>
+      <div className={styles.listContainer} ref={listContainerRef}>
         {messages.map((message, index) => {
           return (
             <div
