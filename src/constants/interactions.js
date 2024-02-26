@@ -1357,7 +1357,7 @@ What is it?
         ])
       )
         return `S9 B5 Mustererkennung`;
-      if (matchWords(message, ["Hilfe", "help"])) return `H9b B5 Flashchen`;
+      if (matchWords(message, ["Hilfe", "help"])) return `H9b B5 Flaschen`;
       if (matchWords(message, ["solution"])) return `L9b B5`;
       return "K9b B5 Flaschen";
     },
