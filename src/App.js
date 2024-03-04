@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import FAB from "./components/FAB";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Overlay } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import ChatBox from "./components/ChatBox";
 import styles from "./app.module.css";
 import usePeriodicRender from "./hooks/usePeriodicRender";
@@ -29,30 +29,27 @@ function App() {
   };
 
   return (
-    <div className={styles.container}>
+    <>
+      <div
+        style={{
+          width: show ? "30vw" : "0vw",
+          overflow: "hidden",
+          transition: "width 0.3s ease-in-out",
+        }}
+      >
+        <Card className={styles.card}>
+          <ChatBox
+            messages={messages}
+            setMessages={setMessages}
+            isRendering={isRendering}
+            renderPeriodicaly={renderPeriodicaly}
+            lang={langRef}
+            setLang={setLang}
+          />
+        </Card>
+      </div>
       <FAB reference={target} onClick={() => setShow(!show)} isShown={show} />
-      <Overlay target={target.current} show={show} placement="top">
-        {({
-          placement: _placement,
-          arrowProps: _arrowProps,
-          show: _show,
-          popper: _popper,
-          hasDoneInitialMeasure: _hasDoneInitialMeasure,
-          ...props
-        }) => (
-          <Card className={styles.card} {...props}>
-            <ChatBox
-              messages={messages}
-              setMessages={setMessages}
-              isRendering={isRendering}
-              renderPeriodicaly={renderPeriodicaly}
-              lang={langRef}
-              setLang={setLang}
-            />
-          </Card>
-        )}
-      </Overlay>
-    </div>
+    </>
   );
 }
 

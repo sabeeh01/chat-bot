@@ -10,8 +10,18 @@ const FAB = ({ onClick, isShown, reference }) => {
       onClick={onClick}
       className={styles.container}
       variant="dark"
+      style={{
+        position: "fixed",
+        zIndex: 999,
+        bottom: '1rem',
+        right: '1rem',
+      }}
     >
-      <img src={isShown ? close : chat} className={styles.icon} alt="start-chat" />
+      <img
+        src={isShown ? close : chat}
+        className={styles.icon}
+        alt="start-chat"
+      />
     </Button>
   );
 };
