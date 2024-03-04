@@ -14,6 +14,10 @@ function App() {
   const [show, setShow] = useState(false);
   const target = useRef(null);
   const langRef = useRef("en");
+  const currentInteraction = useRef("S1 Swizzle Inn");
+  const changeInteraction = (interaction) =>
+    (currentInteraction.current = interaction?.trim());
+
   useEffect(() => {
     if (show && !isMounted.current) {
       // interactions.hasOwnProperty(`Language Select`) &&
@@ -48,6 +52,8 @@ function App() {
               renderPeriodicaly={renderPeriodicaly}
               lang={langRef}
               setLang={setLang}
+              currentInteraction={currentInteraction}
+              changeInteraction={changeInteraction}
             />
           </Card>
         )}
