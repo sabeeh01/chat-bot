@@ -807,9 +807,7 @@ export const interactions = {
     ::next-3::
     [audio]https://www.paragamix.com/images/Bermudas/audioe/bb1.mp3[/audio]
 ::next-4::
-Click on background music for a musical accompaniment.
 What is my first name? Please enter it here in the chat.
-[button=https://soundcloud.com/dancersincrime/dancers-in-crime-b2b-estray-ibiza-rooftop-sessions-1]background music[/button]
 [button=https://goo.gl/maps/yMXc2TVC19G3fF1z9]Swizzle Inn[/button]
 `,
     de: `Wenn Sie die Sprache ändern möchten, [url=https://www.paragamix.com/en-us/start-mission]geben Sie den Code erneut ein und wählen Sie zunächst die Sprache aus[/url]
@@ -819,9 +817,7 @@ Hallo - ich bin der Crazy Dude.
 ::next-3::
 [audio]https://www.paragamix.com/images/Bermudas/audiog/bb1.mp3[/audio]
 ::next-4::
-Klicken Sie auf Hintergrundmusik, um eine musikalische Begleitung zu
-erhalten. Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
-[button=https://soundcloud.com/dancersincrime/dancers-in-crime-b2b-estray-ibiza-rooftop-sessions-1]Hintergrundmusik[/button]
+Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
 [button=https://goo.gl/maps/yMXc2TVC19G3fF1z9]Swizzle Inn[/button]
 `,
     interaction: (message) => {
