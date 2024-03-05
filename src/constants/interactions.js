@@ -1816,37 +1816,40 @@ Follow the arrows and look around the cave. At the very end you will find the bu
 
   // L10
   "L10 B6": {
-    en: `[b]Solution to Blog 6: [/b]
+    en: `[b]Solution to Blog 6:[/b]
 This puzzle has it all. Look for the items on the packing list at the Ocean Discovery Center (pictured right). You will find the items in the showcases. Now you have to find the 4 ships on the wreck map and arrange the letters in the order of the packing list:
-Navigation circle -  in the showcase of the Warwick - G
+
+Navigation circle - in the showcase of the Warwick - G
 Medical ampoule - in the Constellation's showcase at the bottom right - O
 Ship's bell - not to be missed in the Frenchman's showcase - L
 Millstone - not to be missed in the showcase of the Caesar - D
+
 The word you are looking for is GOLD.
 
-You can find out the y by counting the stones on the gold cross (also on display at the Ocean Discovery Center). There are SEVEN.
-So the URL is: https://tinyurl.com/GOLDSEVEN
+You can find out the Y by counting the stones on the gold cross (also on display at the Ocean Discovery Center). There are SEVEN.
+So the URL is: [url=https://tinyurl.com/GOLDSEVEN]https://tinyurl.com/GOLDSEVEN[/url]
 
-Type this URL into your browser. In the article with the number 364215375135191 you can read who bought the gold ducats.
-    ::next-1::
-    Solution: Christian Lueder
-    [button=interaction-S11 B7 Buch]next[/button]`,
+Enter this URL into your browser. In the article number 364215375135191 you can read who bought the gold ducats.
+::next-1::
+Solution: Christian Lueder
+[button=interaction-S11 B7 Buch]next[/button]`,
     de: `[b]Lösung zu Blog 6: [/b]
-    Dieses Rätsel ist eine Herausforderung! Suchen Sie die Gegenstände auf der Packliste im Ocean Discovery Center (rechts im Bild). Sie finden die Gegenstände in den Vitrinen. Anschließend müssen Sie die 4 Schiffe auf der Wrackkarte finden und die Buchstaben in der Reihenfolge der Packliste anordnen.
-    
-    Navigationskreis - in der Vitrine der Warwick - G
-    Medizinische Ampulle - im Schaukasten der Constellation unten rechts - O
-    Schiffsglocke - nicht zu übersehen im Schaufenster des Franzosen - L
-    Millstone - nicht zu übersehen in der Vitrine des Caesar - D
-    Das Wort, das Sie suchen, ist GOLD.
-    
-    Finden Sie das y heraus, indem Sie die Steine auf dem goldenen Kreuz zählen (das ebenfalls im Ocean Discovery Center ausgestellt ist). Es sind SIEBEN.
-    Die URL lautet also: https://tinyurl.com/GOLDSIEBEN
-    
-    Geben Sie diese URL in Ihren Browser ein. In dem Artikel mit der Nummer 364215375135191 können Sie lesen, wer die Golddukaten gekauft hat. 
-        ::next-1::
-        Solution: Christian Lueder
-        [button=interaction-S11 B7 Buch]nächste[/button]`,
+Dieses Rätsel ist eine Herausforderung! Suchen Sie die Gegenstände auf der Packliste im Ocean Discovery Center (rechts im Bild). Sie finden die Gegenstände in den Vitrinen. Anschließend müssen Sie die 4 Schiffe auf der Wrackkarte finden und die Buchstaben in der Reihenfolge der Packliste anordnen.
+
+Navigationskreis - in der Vitrine der Warwick - G
+Medizinische Ampulle - im Schaukasten der Constellation unten rechts - O
+Schiffsglocke - nicht zu übersehen im Schaufenster des Franzosen - L
+Millstone - nicht zu übersehen in der Vitrine des Caesar - D
+
+Das Wort, das Sie suchen, ist GOLD.
+
+Finden Sie das y heraus, indem Sie die Steine auf dem goldenen Kreuz zählen (das ebenfalls im Ocean Discovery Center ausgestellt ist). Es sind SIEBEN.
+Die URL lautet also: [url=https://tinyurl.com/GOLDSIEBEN]https://tinyurl.com/GOLDSIEBEN[/url]
+
+Geben Sie diese URL in Ihren Browser ein. In dem Artikel mit der Nummer 364215375135191 können Sie lesen, wer die Golddukaten gekauft hat. 
+::next-1::
+Solution: Christian Lueder
+[button=interaction-S11 B7 Buch]nächste[/button]`,
     interaction: (message) => {},
   },
 
@@ -2187,7 +2190,7 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Caesar": {
     en: `Welcome to our virtual dive trip. On to Caesar.
-    [video]https://vimeo.com/60489114[/video]
+    [video]https://youtu.be/gb8Gq3KoDrc?si=fnwUq5_uQfO3Ywfs[/video]
     
     The English brig Caesar suffered shipwreck on a Bermuda reef on her way from Shields to Baltimore.
     ::next-1::
@@ -2195,6 +2198,7 @@ Once you open the door, after a few steps you will find the cannon of a board on
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserem virtuellen Tauchausflug. Auf zu Caesar.
     [video]https://youtu.be/gb8Gq3KoDrc?si=fnwUq5_uQfO3Ywfs[/video]
+    
     Die englische Brigg Caesar erlitt auf dem Weg von Shields nach Baltimore auf einem Bermuda-Riff Schiffbruch.
     ::next-1::
     Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.
@@ -2323,6 +2327,34 @@ Once you open the door, after a few steps you will find the cannon of a board on
     [button=interaction-S5 B2 Anruf]Rufen Sie Michael an[/button]`,
     interaction: (message) => {
       return "Klammer5";
+    },
+  },
+  RESTART: {
+    en: "",
+    de: "",
+    interaction: (message) => {
+      if (matchWords(message, ["Blog1", "Blog 1"])) return "S3 B1 Rätsel";
+      if (matchWords(message, ["Blog2", "Blog 2"])) return "S4 B2 Tauchen";
+      if (matchWords(message, ["Blog3", "Blog 3"])) return "S6 B3 Diebesgut";
+      if (matchWords(message, ["Blog4", "Blog 4"])) return "S8 B4 Grotto";
+      if (matchWords(message, ["Blog5", "Blog 5"])) return "S9a B5 Tucker";
+      if (matchWords(message, ["Blog6", "Blog 6"])) return "S10 B6 Goldkreuz";
+      if (matchWords(message, ["Blog7", "Blog 7"])) return "S11 B7 Buch";
+      if (matchWords(message, ["KRET", "K R E T"])) return "Schritt 13 Finale";
+      if (matchWords(message, ["josef.moore110@gmail.com"]))
+        return "S3 B1 Zusatz";
+      if (
+        matchWords(message, [
+          "7gold7",
+          "sevengoldseven",
+          "bit.ly/sevengoldseven",
+          "http://bit.ly/7gold7",
+          "https://bit.ly/7gold7",
+        ])
+      )
+        return "S10b B6 Goldkreuz";
+
+      return null;
     },
   },
 };

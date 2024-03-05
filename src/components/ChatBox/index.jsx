@@ -33,6 +33,15 @@ const ChatBox = ({ show }) => {
   };
 
   const onSubmit = (message, isInteraction = false) => {
+    if (message === "RESTART") {
+      const tempMessages = [...messages];
+      tempMessages.push({ isUser: true, message });
+      setMessages(tempMessages);
+
+      changeInteraction(message);
+      return;
+    }
+
     if (isInteraction) {
       currentInteraction.current = message;
       renderPeriodicaly(interactions[currentInteraction.current][lang]);
@@ -47,7 +56,6 @@ const ChatBox = ({ show }) => {
       )
         ? interactions[currentInteraction.current].interaction(message)
         : null;
-
       if (interaction) {
         interactions.hasOwnProperty(interaction) &&
           renderPeriodicaly(interactions[interaction][lang]);
@@ -65,7 +73,6 @@ const ChatBox = ({ show }) => {
       isMounted.current = true;
     }
   }, [show]);
-
   return (
     <div className={styles.container}>
       <div className={styles.listContainer} ref={listContainerRef}>
@@ -87,6 +94,9 @@ const ChatBox = ({ show }) => {
                 <MessageBox
                   style={{
                     color: message?.isUser ? "white" : "black",
+                    whiteSpace: message?.message?.includes("Solution to Blog 6")
+                      ? "pre-wrap"
+                      : null,
                   }}
                   onSubmit={onSubmit}
                   text={
