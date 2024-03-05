@@ -4,20 +4,20 @@ import MessageBox from "../MessageBox";
 import { useEffect, useRef } from "react";
 import { interactions } from "../../constants/interactions";
 import { textSplitter } from "../../helpers/textSplitter";
+import usePeriodicRender from "../../hooks/usePeriodicRender";
 
-const ChatBox = ({
-  lang,
-  setLang,
-  messages,
-  setMessages,
-  isRendering,
-  renderPeriodicaly,
-  currentInteraction,
-  changeInteraction,
-}) => {
+const ChatBox = ({ show }) => {
+  const [messages, setMessages, isRendering, renderPeriodicaly] =
+    usePeriodicRender();
   const listContainerRef = useRef(null);
   const messagesEndRef = useRef(null);
-  // const currentInteraction = useRef("Language Select");
+  const isMounted = useRef(false);
+  const currentInteraction = useRef("S1 Swizzle Inn");
+  const lang = useRef("en").current;
+
+  const changeInteraction = (interaction) =>
+    (currentInteraction.current = interaction?.trim());
+
   const scrollToBottom = () => {
     if (
       listContainerRef.current &&
@@ -35,7 +35,7 @@ const ChatBox = ({
   const onSubmit = (message, isInteraction = false) => {
     if (isInteraction) {
       currentInteraction.current = message;
-      renderPeriodicaly(interactions[currentInteraction.current][lang.current]);
+      renderPeriodicaly(interactions[currentInteraction.current][lang]);
       changeInteraction(currentInteraction.current);
     } else {
       const tempMessages = [...messages];
@@ -50,13 +50,21 @@ const ChatBox = ({
 
       if (interaction) {
         interactions.hasOwnProperty(interaction) &&
-          renderPeriodicaly(interactions[interaction][lang.current]);
+          renderPeriodicaly(interactions[interaction][lang]);
         changeInteraction(interaction);
       }
     }
   };
 
   useEffect(scrollToBottom, [messages]);
+
+  useEffect(() => {
+    if (show && !isMounted.current) {
+      interactions.hasOwnProperty(`S1 Swizzle Inn`) &&
+        renderPeriodicaly(interactions[`S1 Swizzle Inn`][lang]);
+      isMounted.current = true;
+    }
+  }, [show]);
 
   return (
     <div className={styles.container}>
@@ -77,7 +85,6 @@ const ChatBox = ({
                 className={styles.messageContainer}
               >
                 <MessageBox
-                  setLang={setLang}
                   style={{
                     color: message?.isUser ? "white" : "black",
                   }}
