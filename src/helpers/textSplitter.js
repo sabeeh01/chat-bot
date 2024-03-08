@@ -44,3 +44,13 @@ export const extractTag = (text) => {
   }
   return { tag: matches[0], content: matches[1] };
 };
+
+export const getUrl = (text = "") => {
+  try {
+    const index = text.indexOf("=");
+    if (index === -1) throw new Error("Invalid tag");
+    else return text.substring(text.indexOf("=") + 1);
+  } catch (error) {
+    console.log(error);
+  }
+};
