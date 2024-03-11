@@ -9,7 +9,7 @@ const getInfo = (text) => {
   return resultArray[1];
 };
 
-const MessageBox = ({ text, style, onSubmit, setLang }) => {
+const MessageBox = ({ text, style, onSubmit }) => {
   return Array.isArray(text) ? (
     text.map((splice, index) => {
       const hasTag = splice[0] === "[";
@@ -23,6 +23,11 @@ const MessageBox = ({ text, style, onSubmit, setLang }) => {
               )}
               {tagInfo.tag?.includes("url") && (
                 <a href={getInfo(tagInfo.tag)} target="_blank">
+                  {tagInfo.content}
+                </a>
+              )}
+              {tagInfo.tag === "video" && (
+                <a href={tagInfo.content} target="_blank">
                   {tagInfo.content}
                 </a>
               )}
@@ -42,11 +47,6 @@ const MessageBox = ({ text, style, onSubmit, setLang }) => {
                   onClick={() => {
                     const action = getInfo(tagInfo.tag);
                     const interaction = action.split("-");
-                    if (interaction[0] === "lang") {
-                      setLang(interaction[1]);
-                      onSubmit("S1 Swizzle Inn", true);
-                      return;
-                    }
 
                     if (interaction[0] === "interaction") {
                       onSubmit(interaction[1], true);
