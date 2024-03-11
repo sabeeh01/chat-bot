@@ -2158,7 +2158,7 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Montana": {
     en: `Welcome to our virtual dive trip. On to the Montana.
-    [video]https://youtu.be/E9Awv0bANhc[/video]
+    [video]https://youtu.be/ly2lpRkBbC8?si=M7mFqN_VXWWdQnyZ[/video]
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
@@ -2174,12 +2174,12 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Lartinton": {
     en: `Welcome to our virtual dive trip. On to Lartington.
-    [video]https://youtu.be/JdskrvJUA1M[/video]
+    [video]https://youtu.be/V3D5_OAPizM?si=q4VMQ6vsQyr4sC7t[/video]
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserem virtuellen Tauchausflug. Auf zur Lartington!
-    [video]https://youtu.be/tw39hBqlJlc?si=tSsTfOMTFJbbfaU3[/video]
+    [video]https://youtu.be/V3D5_OAPizM?si=q4VMQ6vsQyr4sC7t[/video]
     ::next-1::
     Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.
     [button=interaction-S5 B2 Anruf]Rufen Sie Michael an[/button]`,
@@ -2244,7 +2244,7 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Warwick": {
     en: `Welcome to our virtual dive trip. On to Warwick.
-    [video]https://youtu.be/LGnEd08vsD0[/video]
+    [video]https://youtu.be/7aTchsUbEM0?si=362lcMxSoZ21Xulf[/video]
     The English merchant ship Warwick was owned by the Earl of Warwick and sank in 1619 during a strong storm in Castle Harbor 
     ::next-1::
     Thank you for booking a virtual dive trip.

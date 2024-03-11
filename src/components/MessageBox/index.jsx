@@ -26,6 +26,11 @@ const MessageBox = ({ text, style, onSubmit }) => {
                   {tagInfo.content}
                 </a>
               )}
+              {tagInfo.tag === "video" && (
+                <a href={tagInfo.content} target="_blank">
+                  {tagInfo.content}
+                </a>
+              )}
               {tagInfo.tag === "img" && (
                 <img src={tagInfo.content} className={styles.contentImg} />
               )}
@@ -42,7 +47,7 @@ const MessageBox = ({ text, style, onSubmit }) => {
                   onClick={() => {
                     const action = getInfo(tagInfo.tag);
                     const interaction = action.split("-");
-                    
+
                     if (interaction[0] === "interaction") {
                       onSubmit(interaction[1], true);
                       return;
