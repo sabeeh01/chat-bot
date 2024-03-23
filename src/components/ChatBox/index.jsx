@@ -22,7 +22,7 @@ const ChatBox = ({ show }) => {
     if (
       listContainerRef.current &&
       listContainerRef.current.scrollHeight >
-        listContainerRef.current.clientHeight
+      listContainerRef.current.clientHeight
     ) {
       messagesEndRef.current.scrollIntoView({
         behavior: "smooth",
@@ -33,12 +33,12 @@ const ChatBox = ({ show }) => {
   };
 
   const onSubmit = (message, isInteraction = false) => {
-    if (message === "RESTART") {
+    if (message?.toUpperCase() === "RESTART") {
       const tempMessages = [...messages];
       tempMessages.push({ isUser: true, message });
       setMessages(tempMessages);
 
-      changeInteraction(message);
+      changeInteraction(message?.toUpperCase());
       return;
     }
 

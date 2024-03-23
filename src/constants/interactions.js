@@ -94,7 +94,7 @@ export const interactions = {
       if (matchWords(message, ["1619"])) return `S5 B2 Zusatz`;
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
         return `Hilfe5`;
-      if (matchWords(message, ["Caesar", "Cäsar"])) return `Tauchen Caesar`;
+      if (matchWords(message, ["Caesar", "Dive Caesar", "go caesar", "Cäsar", 'Geh, Cäsar', 'Tauch Cäsar'])) return `Tauchen Caesar`;
       if (matchWords(message, ["Pedro", "Sanpedro"]))
         return `Tauchen San Pedro`;
       if (matchWords(message, ["venture", "Seaventure"]))
@@ -439,7 +439,7 @@ export const interactions = {
     Mit SOLUTION können Sie dieses Rätsel überspringen.`,
     interaction: (message) => {
       if (matchWords(message, ["loesung"])) return `S5 B2 Zusatz`;
-      if (matchWords(message, ["Caesar", "Cäsar"])) return `Tauchen Caesar`;
+      if (matchWords(message, ["Caesar", "Dive Caesar", "go caesar", "Cäsar", 'Geh, Cäsar', 'Tauch Cäsar'])) return `Tauchen Caesar`;
       if (
         matchWords(message, [
           "ship 3",
@@ -681,7 +681,7 @@ export const interactions = {
       if (matchWords(message, ["1619"])) return `S5 B2 Zusatz`;
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
         return `Hilfe5`;
-      if (matchWords(message, ["Caesar", "Cäsar"])) return `Tauchen Caesar`;
+      if (matchWords(message, ["Caesar", "Dive Caesar", "go caesar", "Cäsar", 'Geh, Cäsar', 'Tauch Cäsar'])) return `Tauchen Caesar`;
       if (matchWords(message, ["Pedro", "Sanpedro"]))
         return `Tauchen San Pedro`;
       if (matchWords(message, ["venture", "Seaventure"]))
@@ -1055,7 +1055,7 @@ Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
       if (matchWords(message, ["1619"])) return `S5 B2 Zusatz`;
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
         return `Hilfe5`;
-      if (matchWords(message, ["Caesar", "Cäsar"])) return `Tauchen Caesar`;
+      if (matchWords(message, ["Caesar", "Dive Caesar", "go caesar", "Cäsar", 'Geh, Cäsar', 'Tauch Cäsar'])) return `Tauchen Caesar`;
       if (matchWords(message, ["Pedro", "Sanpedro"]))
         return `Tauchen San Pedro`;
       if (matchWords(message, ["venture", "Seaventure"]))
@@ -1102,40 +1102,7 @@ Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     ::next-2::
     Ich habe einen weiteren Zettel in der Bar gefunden.
     [button=interaction-S6 B3 Diebesgut]nächste Aufgabe[/button]`,
-    interaction: (message) => {
-      if (matchWords(message, ["1619"])) return `S5 B2 Zusatz`;
-      if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
-        return `Hilfe5`;
-      if (matchWords(message, ["Caesar", "Cäsar"])) return `Tauchen Caesar`;
-      if (matchWords(message, ["Pedro", "Sanpedro"]))
-        return `Tauchen San Pedro`;
-      if (matchWords(message, ["venture", "Seaventure"]))
-        return `Tauchen Sea Venture`;
-      if (matchWords(message, ["L'herminie", "herminie", "Lherminie"]))
-        return `Tauchen Herminie`;
-      if (matchWords(message, ["Constellation"]))
-        return `Tauchen Constellation`;
-      if (matchWords(message, ["Cristobal", "CristobalColon", "Colon"]))
-        return `Tauchen Christobal`;
-      if (matchWords(message, ["Lartington"])) return `Tauchen Lartinton`;
-      if (matchWords(message, ["Montana"])) return `Tauchen Montana`;
-      if (
-        matchWords(message, [
-          "ship 3",
-          "ship3",
-          "schiff3",
-          "Schiff 3",
-          "nave3",
-          "nave 3",
-          "Bateau3",
-          "Bateau 3",
-        ])
-      )
-        return `Tauchen Ship3`;
-      if (matchWords(message, ["Warwick"])) return `Tauchen Warwick`;
-      if (matchWords(message, ["solution"])) return `L5 B2`;
-      return "Klammer5";
-    },
+    interaction: (message) => {},
   },
   // S6
   "S6 B3 Diebesgut": {
