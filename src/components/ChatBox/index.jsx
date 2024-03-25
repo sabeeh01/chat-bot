@@ -6,6 +6,13 @@ import { interactions } from "../../constants/interactions";
 import { textSplitter } from "../../helpers/textSplitter";
 import usePeriodicRender from "../../hooks/usePeriodicRender";
 
+const langFromDoc = () => {
+  const dataLang = document
+    .getElementById("chat-bot")
+    .getAttribute("data-language");
+  return dataLang === "de" ? "de" : "en";
+};
+
 const ChatBox = ({ show }) => {
   const [messages, setMessages, isRendering, renderPeriodicaly] =
     usePeriodicRender();
@@ -13,7 +20,7 @@ const ChatBox = ({ show }) => {
   const messagesEndRef = useRef(null);
   const isMounted = useRef(false);
   const currentInteraction = useRef("S1 Swizzle Inn");
-  const lang = useRef("en").current;
+  const lang = useRef(langFromDoc()).current;
 
   const changeInteraction = (interaction) =>
     (currentInteraction.current = interaction?.trim());
@@ -22,7 +29,7 @@ const ChatBox = ({ show }) => {
     if (
       listContainerRef.current &&
       listContainerRef.current.scrollHeight >
-      listContainerRef.current.clientHeight
+        listContainerRef.current.clientHeight
     ) {
       messagesEndRef.current.scrollIntoView({
         behavior: "smooth",
