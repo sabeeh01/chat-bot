@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { extractTag } from "../../helpers/textSplitter";
 import styles from "./message-box.module.css";
 import { Button } from "react-bootstrap";
@@ -9,7 +9,12 @@ const getInfo = (text) => {
   return resultArray[1];
 };
 
-const MessageBox = ({ text, style, onSubmit }) => {
+const MessageBox = ({ text, style, onSubmit, size }) => {
+  const videoSize = useMemo(() => {
+    const width = document.documentElement.clientWidth * (window.innerWidth > 600 ? .21 : .61);
+    const height = width * 0.5625 // width * (a/b) ex: 1920 * (9/16)
+    return [width, height]
+  }, [size])
   return Array.isArray(text) ? (
     text.map((splice, index) => {
       const hasTag = splice[0] === "[";
@@ -27,9 +32,12 @@ const MessageBox = ({ text, style, onSubmit }) => {
                 </a>
               )}
               {tagInfo.tag === "video" && (
-                <a href={tagInfo.content} target="_blank">
-                  {tagInfo.content}
-                </a>
+                <iframe src={tagInfo.content}
+                  frameBorder="0"
+                  width={videoSize[0]}
+                  height={videoSize[1]}
+                  allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"></iframe>
               )}
               {tagInfo.tag === "img" && (
                 <img src={tagInfo.content} className={styles.contentImg} />

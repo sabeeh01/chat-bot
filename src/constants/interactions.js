@@ -2125,12 +2125,12 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Montana": {
     en: `Welcome to our virtual dive trip. On to the Montana.
-    [video]https://youtu.be/ly2lpRkBbC8?si=M7mFqN_VXWWdQnyZ[/video]
+    [video]https://www.youtube.com/embed/ly2lpRkBbC8[/video]
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserer virtuellen Tauchreise. Auf zur Montana!
-    [video]https://youtu.be/ly2lpRkBbC8?si=M7mFqN_VXWWdQnyZ[/video]
+    [video]https://www.youtube.com/embed/ly2lpRkBbC8[/video]
     ::next-1::
     Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.
     [button=interaction-S5 B2 Anruf]Rufen Sie Michael an[/button]`,
@@ -2141,12 +2141,12 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Lartinton": {
     en: `Welcome to our virtual dive trip. On to Lartington.
-    [video]https://youtu.be/V3D5_OAPizM?si=q4VMQ6vsQyr4sC7t[/video]
+    [video]https://www.youtube.com/embed/V3D5_OAPizM[/video]
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserem virtuellen Tauchausflug. Auf zur Lartington!
-    [video]https://youtu.be/V3D5_OAPizM?si=q4VMQ6vsQyr4sC7t[/video]
+    [video]https://www.youtube.com/embed/V3D5_OAPizM[/video]
     ::next-1::
     Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.
     [button=interaction-S5 B2 Anruf]Rufen Sie Michael an[/button]`,
@@ -2157,14 +2157,14 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Caesar": {
     en: `Welcome to our virtual dive trip. On to Caesar.
-    [video]https://youtu.be/gb8Gq3KoDrc?si=fnwUq5_uQfO3Ywfs[/video]
+    [video]https://www.youtube.com/embed/gb8Gq3KoDrc[/video]
     
     The English brig Caesar suffered shipwreck on a Bermuda reef on her way from Shields to Baltimore.
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserem virtuellen Tauchausflug. Auf zu Caesar.
-    [video]https://youtu.be/gb8Gq3KoDrc?si=fnwUq5_uQfO3Ywfs[/video]
+    [video]https://www.youtube.com/embed/gb8Gq3KoDrc[/video]
     
     Die englische Brigg Caesar erlitt auf dem Weg von Shields nach Baltimore auf einem Bermuda-Riff Schiffbruch.
     ::next-1::
@@ -2177,12 +2177,12 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Herminie": {
     en: `Welcome to our virtual dive trip. On to L'Herminie.
-    [video]https://youtu.be/rfCbndOflwg[/video]
+    [video]https://www.youtube.com/embed/rfCbndOflwg[/video]
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserer virtuellen Tauchreise. Auf zur L'Herminie!
-    [video]https://youtu.be/rfCbndOflwg[/video]
+    [video]https://www.youtube.com/embed/rfCbndOflwg[/video]
     ::next-1::
     Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.
     [button=interaction-S5 B2 Anruf]Rufen Sie Michael an[/button]`,
@@ -2193,13 +2193,13 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Constellation": {
     en: `Welcome to our virtual dive trip. On to Constellation.
-    [video]https://youtu.be/E9Awv0bANhc[/video]
+    [video]https://www.youtube.com/embed/E9Awv0bANhc[/video]
     This American four-masted schooner sank in 1943. During the Second World War it was put into service and used as a cargo ship.
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserer virtuellen Tauchreise. Auf zur Constellation!
-    [video]https://youtu.be/E9Awv0bANhc[/video]
+    [video]https://www.youtube.com/embed/E9Awv0bANhc[/video]
     Dieser amerikanische Viermastschoner sank im Jahr 1943. Während des Zweiten Weltkriegs wurde er in Dienst gestellt und als Frachtschiff eingesetzt.
     ::next-1::
     Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.
@@ -2211,13 +2211,13 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Warwick": {
     en: `Welcome to our virtual dive trip. On to Warwick.
-    [video]https://youtu.be/7aTchsUbEM0?si=362lcMxSoZ21Xulf[/video]
+    [video]https://www.youtube.com/embed/LGnEd08vsD0[/video]
     The English merchant ship Warwick was owned by the Earl of Warwick and sank in 1619 during a strong storm in Castle Harbor 
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserem virtuellen Tauchausflug. Auf zur Warwick!
-    [video]https://youtu.be/7aTchsUbEM0?si=362lcMxSoZ21Xulf[/video]
+    [video]https://www.youtube.com/embed/LGnEd08vsD0[/video]
     Das englische Handelsschiff Warwick gehörte dem Earl of Warwick und sank 1619 während eines starken Sturms im Castle Harbor 
     ::next-1::
    Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.
@@ -2229,13 +2229,13 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   "Tauchen Christobal": {
     en: `Welcome to our virtual dive trip. On to Christobal Colon.
-    [video]https://youtu.be/7khZxnGze4c[/video]
+    [video]https://www.youtube.com/embed/7aTchsUbEM0?si=362lcMxSoZ21Xulf[/video]
     This huge Spanish cruise ship sank in 1946. It sailed between New York and Central America.
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
     de: `Willkommen zu unserer virtuellen Tauchreise. Auf zur Christobal Colon!
-    [video]https://youtu.be/7khZxnGze4c[/video]
+    [video]https://www.youtube.com/embed/7aTchsUbEM0?si=362lcMxSoZ21Xulf[/video]
     Dieses riesige spanische Kreuzfahrtschiff sank im Jahr 1946. Es verkehrte zwischen New York und Mittelamerika.
     ::next-1::
     Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.
@@ -2246,12 +2246,12 @@ Once you open the door, after a few steps you will find the cannon of a board on
   },
 
   "Tauchen San Pedro": {
-    en: `Unfortunately we do not offer diving trips to San Pedro. Instead we recommend the Warwick, which is just as old.[video]https://youtu.be/LGnEd08vsD0[/video]
+    en: `Unfortunately we do not offer diving trips to San Pedro. Instead we recommend the Warwick, which is just as old.[video]https://www.youtube.com/embed/LGnEd08vsD0[/video]
     The English merchant ship Warwick was owned by the Earl of Warwick and sank in 1619 during a strong storm in Castle Harbor.
     ::next-1::
     Thank you for booking a virtual dive trip.
     [button=interaction-S5 B2 Anruf]Call Michael[/button]`,
-    de: `Leider bieten wir keine Tauchausflüge zur San Pedro an. Stattdessen empfehlen wir die Warwick, die genauso alt ist.[video]https://youtu.be/LGnEd08vsD0[/video]
+    de: `Leider bieten wir keine Tauchausflüge zur San Pedro an. Stattdessen empfehlen wir die Warwick, die genauso alt ist.[video]https://www.youtube.com/embed/LGnEd08vsD0[/video]
     Das englische Handelsschiff Warwick gehörte dem Earl of Warwick und sank 1619 während eines starken Sturms im Castle Harbor.
     ::next-1::
     Vielen Dank, dass Sie eine virtuelle Tauchreise gebucht haben.

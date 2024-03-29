@@ -1,7 +1,7 @@
 import ChatInputField from "../ChatInputField";
 import styles from "./chat-box.module.css";
 import MessageBox from "../MessageBox";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { interactions } from "../../constants/interactions";
 import { textSplitter } from "../../helpers/textSplitter";
 import usePeriodicRender from "../../hooks/usePeriodicRender";
@@ -13,7 +13,22 @@ const langFromDoc = () => {
   return dataLang === "de" ? "de" : "en";
 };
 
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+}
+
+
 const ChatBox = ({ show }) => {
+  const size = useWindowSize();
   const [messages, setMessages, isRendering, renderPeriodicaly] =
     usePeriodicRender();
   const listContainerRef = useRef(null);
@@ -80,8 +95,9 @@ const ChatBox = ({ show }) => {
       isMounted.current = true;
     }
   }, [show]);
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="main-box">
       <div className={styles.listContainer} ref={listContainerRef}>
         {messages.map((message, index) => {
           return (
@@ -105,6 +121,7 @@ const ChatBox = ({ show }) => {
                       ? "pre-wrap"
                       : null,
                   }}
+                  size={size}
                   onSubmit={onSubmit}
                   text={
                     message?.isUser
