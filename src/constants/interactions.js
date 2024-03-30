@@ -431,10 +431,10 @@ export const interactions = {
   },
 
   Hilfe5: {
-    en: `[b]Help: [/b]Make some diving trips to the wrecks by typing the name of the shipwreck, for example Sea Venture or Ship 3. You can find the names of the ships on the [url=https://tinyurl.com/mapofwrecks]Wreck Map[/url].
+    en: `[b]Help: [/b]Make some diving trips to the wrecks by typing the name of the shipwreck, for example Sea Venture or Ship 3. You can find the names of the ships on the [url=https://www.google.com/maps/d/edit?mid=1-_X23wraPdPggojHiQv7TrDGsCmgEthz&usp=sharing]Wreck Map[/url].
     On one of the videos you will discover the cannonballs you are looking for. When did this ship sink?
     With SOLUTION you will skip this puzzle.`,
-    de: `[b]Hilfe: [/b]Machen Sie Tauchausflüge zu den Wracks, indem Sie den Namen des Schiffswracks eingeben, zum Beispiel Sea Venture oder Ship 3. Die Namen der Schiffe finden Sie auf der [url=https://tinyurl.com/mapofwrecks]Wrackkarte[/url].
+    de: `[b]Hilfe: [/b]Machen Sie Tauchausflüge zu den Wracks, indem Sie den Namen des Schiffswracks eingeben, zum Beispiel Sea Venture oder Ship 3. Die Namen der Schiffe finden Sie auf der [url=https://www.google.com/maps/d/edit?mid=1-_X23wraPdPggojHiQv7TrDGsCmgEthz&usp=sharing]Wrackkarte[/url].
     Auf einem der Videos werden Sie die gesuchten Kanonenkugeln entdecken. Wann ist dieses Schiff gesunken?
     Mit SOLUTION können Sie dieses Rätsel überspringen.`,
     interaction: (message) => {
@@ -1044,13 +1044,13 @@ Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     [img]https://dvgpba5hywmpo.cloudfront.net/media/image/NRDKa7BJSQJ4bUwuaExzv1bp3[/img]
     ::next-2::
     Are you interested in when the ship sank that I found these cannonballs on? Explore the wreck map, type in the name of the wreck or type in the year if you know it.
-    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B&usp=sharing]wreck map[/button]`,
+    [button=https://www.google.com/maps/d/edit?mid=1-_X23wraPdPggojHiQv7TrDGsCmgEthz&usp=sharing]wreck map[/button]`,
     de: `[audio]https://www.paragamix.com/images/Bermudas/audiog/bb2.mp3[/audio]
     ::next-1::
     [img]https://dvgpba5hywmpo.cloudfront.net/media/image/NRDKa7BJSQJ4bUwuaExzv1bp3[/img]
     ::next-2::
     nteressiert es Sie, wann das Schiff gesunken ist, auf dem ich diese Kanonenkugeln gefunden habe? Erkunden Sie die Wrackkarte, geben Sie den Namen des Wracks ein oder geben Sie das Jahr ein, wenn Sie die Lösung wissen.
-    [button=https://www.google.com/maps/d/edit?mid=1ynEeHbhS90y2wgUNo86dctrTSOw1c33B&usp=sharing]Wrackkarte[/button]`,
+    [button=https://www.google.com/maps/d/edit?mid=1-_X23wraPdPggojHiQv7TrDGsCmgEthz&usp=sharing]Wrackkarte[/button]`,
     interaction: (message) => {
       if (matchWords(message, ["1619"])) return `S5 B2 Zusatz`;
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
