@@ -1881,19 +1881,16 @@ Once you open the door, after a few steps you will find the cannon of a board on
 
   // H8
   "H8 B4 Grotto": {
-    en: `[b]Help: [/b]
+    en: `[b]Help: [/b]1. First press the light switch in Henry Tucker's house so that the infrared camera can detect what is hidden. Look around, you will find two grids on which Henry has marked numbers. Place the two grids on top of each other and fill in the empty spaces with the numbers from 1 to 9, each only once, so that in each row, each column and each diagonal the sum is 34. 
 
-    1. First press the light switch in Henry Tucker's house so that the infrared camera can detect what is hidden. Look around, you will find two grids on which Henry has marked numbers. Place the two grids on top of each other and fill in the empty spaces with the numbers from 1 to 9, each only once, so that in each row, each column and each diagonal the sum is 34. 
+2. Look at the interactive map of Bermuda. There you will find a grid similar to the one in Henry Tucker's house. In blog post 4, the number 2 is mentioned. 
     
-    2. Look at the interactive map of Bermuda. There you will find a grid similar to the one in Henry Tucker's house. In blog post 4, the number 2 is mentioned. 
-    
-    With SOLUTION you can skip this mystery.`,
-    de: `[b]Hilfe: [/b]
+With SOLUTION you can skip this mystery.`,
+    de: `[b]Hilfe: [/b]1. Beginnen Sie damit, den Lichtschalter in Henry Tuckers Haus zu betätigen, damit die Infrarotkamera erkennen kann, was verborgen ist. Schauen Sie sich um, Sie werden zwei Gitter finden, auf denen Henry Zahlen markiert hat. Legen Sie die beiden Gitter übereinander und füllen Sie die leeren Felder mit den Zahlen von 1 bis 9, wobei jede Zahl nur einmal vorkommt. Dabei sollte die Summe in jeder Zeile, jeder Spalte und jeder Diagonale 34 betragen.
 
-    1. Beginnen Sie damit, den Lichtschalter in Henry Tuckers Haus zu betätigen, damit die Infrarotkamera erkennen kann, was verborgen ist. Schauen Sie sich um, Sie werden zwei Gitter finden, auf denen Henry Zahlen markiert hat. Legen Sie die beiden Gitter übereinander und füllen Sie die leeren Felder mit den Zahlen von 1 bis 9, wobei jede Zahl nur einmal vorkommt. Dabei sollte die Summe in jeder Zeile, jeder Spalte und jeder Diagonale 34 betragen.
-    2. Sehen Sie sich die interaktive Karte von den Bermudas an. Dort finden Sie ein Gitter, das dem in Henry Tuckers Haus ähnelt. Im Blogbeitrag 4 wird die Zahl 2 erwähnt. 
+2. Sehen Sie sich die interaktive Karte von den Bermudas an. Dort finden Sie ein Gitter, das dem in Henry Tuckers Haus ähnelt. Im Blogbeitrag 4 wird die Zahl 2 erwähnt. 
     
-    Mit SOLUTION können Sie sich dieses Rätsel ersparen.`,
+Mit SOLUTION können Sie sich dieses Rätsel ersparen.`,
     interaction: (message) => {
       if (
         matchWords(message, [

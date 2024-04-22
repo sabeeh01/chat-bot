@@ -117,7 +117,9 @@ const ChatBox = ({ show }) => {
                 <MessageBox
                   style={{
                     color: message?.isUser ? "white" : "black",
-                    whiteSpace: message?.message?.includes("Solution to Blog 6")
+                    whiteSpace: ["L10 B6", "H8 B4 Grotto"].includes(
+                      currentInteraction.current
+                    )
                       ? "pre-wrap"
                       : null,
                   }}
