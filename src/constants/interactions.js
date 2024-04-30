@@ -946,7 +946,7 @@ Wie lautet mein Vorname? Bitte geben Sie ihn hier im Chat ein.
     [b]Wenn es nicht mehr weitergeht: [/b]Starten Sie erneut mit RESTART. Geben Sie dann einfach die Nummer des Blogs ein (z. B. BLOG1 für den ersten Blog) und Sie beginnen dort, wo Sie aufgehört haben. 
     ::next-5::
     Geben Sie hier "Blog x" für die nächste Aufgabe ein, also z.B. Blog 1 für den ersten Blog oder starten Sie die erste Aufgabe über die Schaltfläche.
-    [button=https://parablog.wixsite.com/bermudaswrecks]Bils-Blog[/button]
+    [button=https://parablog.wixsite.com/wracks]Bils-Blog[/button]
     [button=interaction-S3 B1 Rätsel]erste Aufgabe (blog1)[/button]`,
     interaction: (message) => {
       if (matchWords(message, [`hilfe`, `hinweis`, `ayuda`, `help`, `aide`]))
