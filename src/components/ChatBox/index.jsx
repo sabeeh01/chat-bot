@@ -6,6 +6,10 @@ import { interactions } from "../../constants/interactions";
 import { textSplitter } from "../../helpers/textSplitter";
 import usePeriodicRender from "../../hooks/usePeriodicRender";
 
+const preWrap = (interaction) => {
+  return interaction === "L10 B6" || interaction === "H8 B4 Grotto";
+};
+
 const langFromDoc = () => {
   const dataLang = document
     .getElementById("chat-bot")
@@ -66,7 +70,10 @@ const ChatBox = ({ show }) => {
 
     if (isInteraction) {
       currentInteraction.current = message;
-      renderPeriodicaly(interactions[currentInteraction.current][lang]);
+      renderPeriodicaly(
+        interactions[currentInteraction.current][lang],
+        currentInteraction.current
+      );
       changeInteraction(currentInteraction.current);
     } else {
       const tempMessages = [...messages];
@@ -80,7 +87,7 @@ const ChatBox = ({ show }) => {
         : null;
       if (interaction) {
         interactions.hasOwnProperty(interaction) &&
-          renderPeriodicaly(interactions[interaction][lang]);
+          renderPeriodicaly(interactions[interaction][lang], interaction);
         changeInteraction(interaction);
       }
     }
@@ -117,9 +124,7 @@ const ChatBox = ({ show }) => {
                 <MessageBox
                   style={{
                     color: message?.isUser ? "white" : "black",
-                    whiteSpace: ["L10 B6", "H8 B4 Grotto"].includes(
-                      currentInteraction.current
-                    )
+                    whiteSpace: preWrap(message?.interaction)
                       ? "pre-wrap"
                       : null,
                   }}

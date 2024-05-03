@@ -10,7 +10,7 @@ const usePeriodicRender = () => {
     timersRef.current &&
     timersRef.current.forEach((timer) => clearTimeout(timer));
 
-  const renderPeriodicaly = (response) => {
+  const renderPeriodicaly = (response, currInteraction) => {
     clearTimers();
 
     const newMessages = lineSplitter(response);
@@ -19,7 +19,7 @@ const usePeriodicRender = () => {
     newMessages.forEach((newMessage, index) => {
       timers.push(
         setTimeout(() => {
-          setCurrentMessages((prev) => [...prev, newMessage]);
+          setCurrentMessages((prev) => [...prev, {...newMessage, interaction: currInteraction}]);
           if (index === newMessages.length - 1) setIsRendering(false);
         }, (index + 1) * 3000)
       );
