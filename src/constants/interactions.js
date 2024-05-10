@@ -27,8 +27,8 @@ export const interactions = {
   },
 
   Klammer2: {
-    en: `If this is your answer, unfortunately it is wrong. If this should be the solution for a blog puzzle, please enter the corresponding blog first, e.g. BLOG 1 for the 1st blog.`,
-    de: `Wenn dies Ihre Antwort ist, ist sie leider falsch. Wenn dies die Lösung für ein Blog-Rätsel sein soll, geben Sie bitte zuerst den entsprechenden Blog ein, z.B. BLOG 1 für den 1.`,
+    en: `If this is your answer, unfortunately it is wrong.`,
+    de: `Wenn dies Ihre Antwort ist, ist sie leider falsch.`,
     interaction: (message) => {
       if (matchWords(message, [`Hilfe`, `Ayuda`, `help`, `aide`]))
         return `Hilfe2 Aufloesung`;
@@ -94,7 +94,17 @@ export const interactions = {
       if (matchWords(message, ["1619"])) return `S5 B2 Zusatz`;
       if (matchWords(message, ["Hilfe", "Hinweis", "ayuda", "aide", "help"]))
         return `Hilfe5`;
-      if (matchWords(message, ["Caesar", "Dive Caesar", "go caesar", "Cäsar", 'Geh, Cäsar', 'Tauch Cäsar'])) return `Tauchen Caesar`;
+      if (
+        matchWords(message, [
+          "Caesar",
+          "Dive Caesar",
+          "go caesar",
+          "Cäsar",
+          "Geh, Cäsar",
+          "Tauch Cäsar",
+        ])
+      )
+        return `Tauchen Caesar`;
       if (matchWords(message, ["Pedro", "Sanpedro"]))
         return `Tauchen San Pedro`;
       if (matchWords(message, ["venture", "Seaventure"]))
